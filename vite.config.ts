@@ -9,5 +9,6 @@ export default defineConfig({
   },
   preview: {
     port: 4000,
+    allowedHosts: ["rpstitans.xyz"],
   },
 });
