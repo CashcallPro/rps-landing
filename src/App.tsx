@@ -3,6 +3,7 @@ import { TowerControl as GameController, Swords, Users, Github, Twitter, Message
 
 function App() {
   const roadmapRef = useRef<HTMLDivElement>(null);
+  const progressPercentage = 47; // This can be made dynamic later
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -73,6 +74,60 @@ function App() {
             <button className="border-2 border-[#191970] text-[#191970] px-8 py-4 rounded-lg font-lilita text-lg hover:bg-[#191970]/10 hover:scale-105 transition-all">
               Learn More
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Early Access Titan Program Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-[#191970] to-[#191970]/80">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-lilita text-white mb-6">
+              🎯 Early Access Titan Program
+            </h2>
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              We're onboarding 100 Telegram groups in our exclusive pre-launch rev-share phase.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
+                <div className="text-3xl mb-3">✅</div>
+                <h3 className="text-lg font-lilita text-[#FFD700] mb-2">No cost to join</h3>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
+                <div className="text-3xl mb-3">✅</div>
+                <h3 className="text-lg font-lilita text-[#FFD700] mb-2">Earn from every game played in your group</h3>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
+                <div className="text-3xl mb-3">✅</div>
+                <h3 className="text-lg font-lilita text-[#FFD700] mb-2">Be among the first to unlock Titan rewards</h3>
+              </div>
+            </div>
+
+            {/* Progress Bar */}
+            <div className="max-w-2xl mx-auto">
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-white font-lilita text-lg">Groups Onboarded</span>
+                <span className="text-[#FFD700] font-lilita text-lg">{progressPercentage}/100</span>
+              </div>
+              <div className="w-full bg-white/20 rounded-full h-6 overflow-hidden">
+                <div 
+                  className="h-full bg-gradient-to-r from-[#FFD700] to-[#FFD700]/80 rounded-full transition-all duration-1000 ease-out relative"
+                  style={{ width: `${progressPercentage}%` }}
+                >
+                  <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
+                </div>
+              </div>
+              <div className="mt-4 text-white/80 text-sm">
+                {100 - progressPercentage} spots remaining • Limited time opportunity
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <button className="bg-[#FFD700] text-[#191970] px-8 py-4 rounded-lg font-lilita text-lg hover:bg-[#FFD700]/90 hover:scale-105 transition-all shadow-lg">
+                Join Early Access Program
+              </button>
+            </div>
           </div>
         </div>
       </section>
