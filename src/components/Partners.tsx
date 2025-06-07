@@ -72,7 +72,7 @@ const Partners = () => {
                 <span className="text-2xl mr-3">🎮</span>
                 Per Game Round:
               </h3>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <div className="space-y-3">
@@ -103,7 +103,7 @@ const Partners = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center justify-center">
                   <div className="text-center p-4 bg-[#FFD700]/20 rounded-lg border-2 border-[#FFD700]">
                     <DollarSign className="w-12 h-12 text-[#FFD700] mx-auto mb-3" />
@@ -250,7 +250,7 @@ const Partners = () => {
             <p className="text-base text-white/80 mb-8">
               Get in early to claim your community's spot and maximize earnings.
             </p>
-            
+
             <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 mb-6">
               <div className="text-5xl font-lilita text-[#FFD700] mb-3">100</div>
               <div className="text-lg text-white">Total Partner Spots Available</div>
@@ -268,20 +268,22 @@ const Partners = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#191970] text-white py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-center md:text-left mb-4 md:mb-0">
-              <h3 className="text-xl font-lilita text-[#FFD700] mb-2">RPS Titans Partners</h3>
-              <p className="text-sm text-white/70">© 2024 RPS Titans. All rights reserved.</p>
-            </div>
-            <div className="flex gap-6 items-center">
-              <a href="/" className="hover:text-[#FFD700] transition-colors">Home</a>
-              <a href="#" className="hover:text-[#FFD700] transition-colors">Support</a>
-              <a href="#" className="hover:text-[#FFD700] transition-colors">Terms</a>
+      <section>
+        <footer className="bg-[#191970] text-white py-8">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <div className="text-center md:text-left mb-4 md:mb-0">
+                <h3 className="text-xl font-lilita text-[#FFD700] mb-2">RPS Titans Partners</h3>
+                <p className="text-sm text-white/70">© 2024 RPS Titans. All rights reserved.</p>
+              </div>
+              <div className="flex gap-6 items-center">
+                <a href="/" className="hover:text-[#FFD700] transition-colors">Home</a>
+                <a href="#" className="hover:text-[#FFD700] transition-colors">Support</a>
+                <a href="#" className="hover:text-[#FFD700] transition-colors">Terms</a>
+              </div>
             </div>
           </div>
-        </div>
+        </footer>
       </section>
     </div>
   );
