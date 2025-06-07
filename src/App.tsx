@@ -35,6 +35,7 @@ function App() {
           <div className="flex gap-6 items-center">
             <a href="#about" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">About</a>
             <a href="#features" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Features</a>
+            <a href="/partners" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Partners</a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">
               <Twitter className="w-5 h-5" />
             </a>
@@ -104,29 +105,30 @@ function App() {
               </div>
             </div>
 
-            {/* Progress Bar */}
+            {/* Enhanced Progress Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="flex justify-between items-center mb-4">
                 <span className="text-white font-lilita text-lg">Groups Onboarded</span>
                 <span className="text-[#FFD700] font-lilita text-lg">{progressPercentage}/100</span>
               </div>
-              <div className="w-full bg-white/20 rounded-full h-6 overflow-hidden">
+              <div className="w-full bg-white/20 rounded-full h-8 overflow-hidden progress-bar-container">
                 <div 
-                  className="h-full bg-gradient-to-r from-[#FFD700] to-[#FFD700]/80 rounded-full transition-all duration-1000 ease-out relative"
-                  style={{ width: `${progressPercentage}%` }}
+                  className="h-full bg-gradient-to-r from-[#FFD700] via-[#FFD700] to-[#FFD700]/80 rounded-full progress-bar-fill relative"
+                  style={{ '--progress-width': `${progressPercentage}%` } as React.CSSProperties}
                 >
-                  <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
                 </div>
               </div>
               <div className="mt-4 text-white/80 text-sm">
-                {100 - progressPercentage} spots remaining • Limited time opportunity
+                <span className="text-[#FFD700] font-lilita">{100 - progressPercentage} spots remaining</span> • Limited time opportunity
               </div>
             </div>
 
             <div className="mt-8">
-              <button className="bg-[#FFD700] text-[#191970] px-8 py-4 rounded-lg font-lilita text-lg hover:bg-[#FFD700]/90 hover:scale-105 transition-all shadow-lg">
-                Join Early Access Program
-              </button>
+              <a href="/partners">
+                <button className="bg-[#FFD700] text-[#191970] px-8 py-4 rounded-lg font-lilita text-lg hover:bg-[#FFD700]/90 hover:scale-105 transition-all shadow-lg">
+                  Join Early Access Program
+                </button>
+              </a>
             </div>
           </div>
         </div>
