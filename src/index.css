@@ -33,6 +33,33 @@
   }
 }
 
+@keyframes progressFill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.6);
+  }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
@@ -49,6 +76,28 @@
 .animate-slide-in-delay-2 {
   animation: slideIn 0.6s ease-out 0.4s forwards;
   opacity: 0;
+}
+
+.progress-bar-fill {
+  animation: progressFill 2s ease-out forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar-fill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.progress-bar-container {
+  animation: glow 2s ease-in-out infinite;
+  border-radius: 9999px;
 }
 
 .roadmap-item {
