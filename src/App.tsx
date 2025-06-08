@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { TowerControl as GameController, Swords, Users, Github, Twitter, MessageCircle } from 'lucide-react';
+import { TowerControl as GameController, Swords, Users } from 'lucide-react';
+import Header from './components/Header';
 
 function App() {
   const roadmapRef = useRef<HTMLDivElement>(null);
@@ -29,27 +30,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[rgb(235,234,231)]">
       {/* Header */}
-      <header className="bg-[#191970]/90 text-white py-4 fixed w-full top-0 z-50">
-        <nav className="container mx-auto px-4 flex justify-between items-center">
-          <div className="text-2xl font-lilita text-[#FFD700] hover:scale-105 transition-transform">RPS Titans</div>
-          <div className="flex gap-6 items-center">
-            <a href="#about" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">About</a>
-            <a href="#features" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Features</a>
-            <a href="/partners" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Partners</a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">
-              <MessageCircle className="w-5 h-5" />
-            </a>
-            <a href="https://t.me/RPS_Titan_bot?game=RPSTitans">
-              <button className="bg-[#FFD700] text-[#191970] px-4 py-2 rounded-lg font-lilita hover:bg-[#FFD700]/90 hover:scale-105 transition-all">
-                Play Now
-              </button>
-            </a>
-          </div>
-        </nav>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4">
@@ -251,12 +232,6 @@ function App() {
               <a href="#" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Privacy Policy</a>
               <a href="#" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Terms of Service</a>
               <a href="#" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Contact</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">
-                <MessageCircle className="w-5 h-5" />
-              </a>
             </div>
           </div>
         </div>
