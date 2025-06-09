@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Users, DollarSign, Zap, Shield, TrendingUp, Bot } from 'lucide-react';
+import { ArrowRight, Users, DollarSign, Zap, Shield, TrendingUp, Bot, Trophy, Target, Calculator } from 'lucide-react';
 import Header from './Header';
 
 const Partners = () => {
@@ -45,7 +45,7 @@ const Partners = () => {
       {/* How Earnings Work */}
       <section id="earnings" className="py-16 px-4 bg-[#191970]/5">
         <div className="container mx-auto">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-lilita text-[#191970] mb-8 text-center">
               💸 How Earnings Work
             </h2>
@@ -53,80 +53,134 @@ const Partners = () => {
               Every match in RPS Titans generates rewards — not just for players, but also for you.
             </p>
 
-            {/* Per Game Round */}
-            <div className="bg-white/50 p-6 rounded-lg backdrop-blur-sm mb-6">
-              <h3 className="text-xl font-lilita text-[#191970] mb-4 flex items-center">
-                <span className="text-2xl mr-3">🎮</span>
-                Per Game Round:
+            {/* Enhanced Per Game Round */}
+            <div className="bg-gradient-to-br from-white/60 to-white/40 p-8 rounded-xl backdrop-blur-sm mb-8 border border-[#FFD700]/20">
+              <h3 className="text-2xl font-lilita text-[#191970] mb-6 flex items-center justify-center">
+                <Trophy className="w-8 h-8 text-[#FFD700] mr-3" />
+                Per Game Round Breakdown
               </h3>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between p-3 bg-[#191970]/10 rounded-lg">
-                      <span className="text-sm font-semibold">2 Players stake:</span>
-                      <span className="text-[#FFD700] font-lilita text-sm">10 tokens each = 20 tokens total</span>
+              <div className="grid lg:grid-cols-2 gap-8">
+                {/* Game Flow */}
+                <div className="space-y-4">
+                  <div className="bg-[#191970]/10 p-4 rounded-lg border-l-4 border-[#FFD700]">
+                    <div className="flex items-center mb-2">
+                      <Target className="w-5 h-5 text-[#FFD700] mr-2" />
+                      <span className="font-lilita text-[#191970]">Game Setup</span>
                     </div>
-                    <div className="flex items-center justify-between p-3 bg-green-100 rounded-lg">
-                      <span className="text-sm font-semibold">Winner receives:</span>
-                      <span className="text-green-600 font-lilita text-sm">18 tokens</span>
+                    <p className="text-sm text-[#191970]/80">2 Players join and stake 10 tokens each</p>
+                    <div className="text-right">
+                      <span className="text-lg font-lilita text-[#FFD700]">20 tokens total</span>
                     </div>
-                    <div className="p-3 bg-[#FFD700]/20 rounded-lg">
-                      <div className="text-sm font-semibold mb-2">2 tokens used as fees:</div>
-                      <div className="space-y-1 text-xs">
-                        <div className="flex justify-between">
-                          <span>• RPS Titans ecosystem</span>
-                          <span className="font-lilita">1.0 token</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>• Player reward pool</span>
-                          <span className="font-lilita">0.5 token</span>
-                        </div>
-                        <div className="flex justify-between text-[#191970] font-semibold">
-                          <span>• You as Titan admin</span>
-                          <span className="font-lilita">0.5 token</span>
-                        </div>
+                  </div>
+
+                  <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                    <div className="flex items-center mb-2">
+                      <Trophy className="w-5 h-5 text-green-600 mr-2" />
+                      <span className="font-lilita text-green-700">Winner Takes</span>
+                    </div>
+                    <p className="text-sm text-green-600">90% of the total pot goes to winner</p>
+                    <div className="text-right">
+                      <span className="text-lg font-lilita text-green-600">18 tokens</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-[#FFD700]/20 p-4 rounded-lg border-l-4 border-[#FFD700]">
+                    <div className="flex items-center mb-2">
+                      <Calculator className="w-5 h-5 text-[#191970] mr-2" />
+                      <span className="font-lilita text-[#191970]">Fee Distribution (2 tokens)</span>
+                    </div>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between items-center">
+                        <span className="text-[#191970]/70">• RPS Titans ecosystem</span>
+                        <span className="font-lilita text-[#191970]">1.0 token (50%)</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-[#191970]/70">• Player reward pool</span>
+                        <span className="font-lilita text-[#191970]">0.5 token (25%)</span>
+                      </div>
+                      <div className="flex justify-between items-center bg-[#FFD700]/30 p-2 rounded">
+                        <span className="text-[#191970] font-semibold">• You as Titan Partner</span>
+                        <span className="font-lilita text-[#191970] font-bold">0.5 token (25%)</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-center">
-                  <div className="text-center p-4 bg-[#FFD700]/20 rounded-lg border-2 border-[#FFD700]">
-                    <DollarSign className="w-12 h-12 text-[#FFD700] mx-auto mb-3" />
-                    <div className="text-xl font-lilita text-[#191970]">0.25 tokens</div>
-                    <div className="text-xs text-[#191970]/70">per player, per game</div>
+                {/* Visual Summary */}
+                <div className="flex flex-col justify-center">
+                  <div className="text-center p-6 bg-gradient-to-br from-[#FFD700]/30 to-[#FFD700]/10 rounded-xl border-2 border-[#FFD700] mb-4">
+                    <DollarSign className="w-16 h-16 text-[#FFD700] mx-auto mb-3" />
+                    <div className="text-3xl font-lilita text-[#191970] mb-2">0.25 tokens</div>
+                    <div className="text-sm text-[#191970]/70 mb-3">per player, per game</div>
+                    <div className="text-xs text-[#191970]/60 bg-white/50 p-2 rounded">
+                      = 25% of all game fees
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3 text-center">
+                    <div className="bg-white/50 p-3 rounded-lg">
+                      <div className="text-lg font-lilita text-[#191970]">10</div>
+                      <div className="text-xs text-[#191970]/60">tokens staked</div>
+                    </div>
+                    <div className="bg-white/50 p-3 rounded-lg">
+                      <div className="text-lg font-lilita text-[#191970]">2</div>
+                      <div className="text-xs text-[#191970]/60">players</div>
+                    </div>
+                    <div className="bg-white/50 p-3 rounded-lg">
+                      <div className="text-lg font-lilita text-[#FFD700]">0.5</div>
+                      <div className="text-xs text-[#191970]/60">your share</div>
+                    </div>
+                    <div className="bg-white/50 p-3 rounded-lg">
+                      <div className="text-lg font-lilita text-green-600">18</div>
+                      <div className="text-xs text-[#191970]/60">winner gets</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Example Calculation */}
-            <div className="bg-gradient-to-r from-[#191970] to-[#191970]/80 p-6 rounded-lg text-white">
-              <h3 className="text-xl font-lilita mb-4 flex items-center">
-                <span className="text-2xl mr-3">🧠</span>
-                Example:
+            {/* Enhanced Example Calculation */}
+            <div className="bg-gradient-to-r from-[#191970] to-[#191970]/80 p-8 rounded-xl text-white">
+              <h3 className="text-2xl font-lilita mb-6 flex items-center justify-center">
+                <Calculator className="w-8 h-8 text-[#FFD700] mr-3" />
+                Real Example: Active Community
               </h3>
-              <div className="grid md:grid-cols-4 gap-4 text-center">
-                <div className="bg-white/10 p-3 rounded-lg">
-                  <div className="text-2xl font-lilita text-[#FFD700]">50</div>
-                  <div className="text-xs">Players in group</div>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <div className="bg-white/10 p-4 rounded-lg">
+                    <div className="text-sm text-white/70 mb-1">Community Size</div>
+                    <div className="text-2xl font-lilita text-[#FFD700]">50 active players</div>
+                  </div>
+                  <div className="bg-white/10 p-4 rounded-lg">
+                    <div className="text-sm text-white/70 mb-1">Daily Activity</div>
+                    <div className="text-2xl font-lilita text-[#FFD700]">3 rounds per player</div>
+                  </div>
+                  <div className="bg-white/10 p-4 rounded-lg">
+                    <div className="text-sm text-white/70 mb-1">Total Daily Rounds</div>
+                    <div className="text-2xl font-lilita text-[#FFD700]">150 rounds</div>
+                  </div>
                 </div>
-                <div className="bg-white/10 p-3 rounded-lg">
-                  <div className="text-2xl font-lilita text-[#FFD700]">3</div>
-                  <div className="text-xs">Rounds per day</div>
-                </div>
-                <div className="bg-white/10 p-3 rounded-lg">
-                  <div className="text-2xl font-lilita text-[#FFD700]">75</div>
-                  <div className="text-xs">Tokens/day</div>
-                </div>
-                <div className="bg-white/10 p-3 rounded-lg">
-                  <div className="text-2xl font-lilita text-[#FFD700]">2,200+</div>
-                  <div className="text-xs">Tokens/month</div>
+
+                <div className="space-y-4">
+                  <div className="bg-[#FFD700]/20 p-4 rounded-lg border border-[#FFD700]">
+                    <div className="text-sm text-white/70 mb-1">Daily Earnings</div>
+                    <div className="text-3xl font-lilita text-[#FFD700]">75 tokens</div>
+                    <div className="text-xs text-white/60">150 rounds × 0.5 tokens</div>
+                  </div>
+                  <div className="bg-[#FFD700]/20 p-4 rounded-lg border border-[#FFD700]">
+                    <div className="text-sm text-white/70 mb-1">Monthly Earnings</div>
+                    <div className="text-3xl font-lilita text-[#FFD700]">2,250+ tokens</div>
+                    <div className="text-xs text-white/60">75 tokens × 30 days</div>
+                  </div>
                 </div>
               </div>
-              <div className="mt-4 text-center">
-                <p className="text-[#FFD700] font-lilita text-sm">→ 150 rounds → 75 tokens/day → Over 2,200 tokens/month, passively</p>
+
+              <div className="mt-6 p-4 bg-white/10 rounded-lg border border-[#FFD700]/50">
+                <p className="text-center text-[#FFD700] font-lilita text-lg">
+                  💰 Passive income that grows with your community engagement!
+                </p>
               </div>
             </div>
           </div>

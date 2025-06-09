@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { TowerControl as GameController, Swords, Users } from 'lucide-react';
+import { TowerControl as GameController, Swords, Users, Coins } from 'lucide-react';
 import Header from './components/Header';
 
 function App() {
@@ -115,11 +115,30 @@ function App() {
         </div>
       </section>
 
+      {/* About Section */}
+      <section id="about" className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="bg-white/50 p-8 rounded-lg backdrop-blur-sm max-w-3xl mx-auto hover:transform hover:scale-105 transition-all duration-300">
+            <h2 className="text-4xl font-lilita text-center text-[#191970] mb-6">About RPS Titans</h2>
+            <p className="text-[#191970]/90 text-lg mb-6">
+              RPS Titans revolutionizes the classic game of Rock Paper Scissors with modern gameplay mechanics,
+              competitive elements, and a vibrant community. Our mission is to create the most engaging and
+              strategic RPS experience ever made.
+            </p>
+            <p className="text-[#191970]/90 text-lg">
+              Whether you're a casual player looking for quick matches or a competitive gamer aiming for the top,
+              RPS Titans offers something for everyone. Join thousands of players worldwide in this exciting new
+              take on a timeless game.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section id="features" className="py-20 px-4 bg-[#191970]/5">
         <div className="container mx-auto">
           <h2 className="text-4xl font-lilita text-center text-[#191970] mb-12">Game Features</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white/50 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
               <GameController className="w-12 h-12 text-[#FFD700] mb-4" />
               <h3 className="text-xl font-lilita text-[#191970] mb-2">Strategic Gameplay</h3>
@@ -134,6 +153,11 @@ function App() {
               <Users className="w-12 h-12 text-[#FFD700] mb-4" />
               <h3 className="text-xl font-lilita text-[#191970] mb-2">Multiplayer Battles</h3>
               <p className="text-[#191970]/80">Challenge friends or face random opponents in real-time matches.</p>
+            </div>
+            <div className="bg-white/50 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
+              <Coins className="w-12 h-12 text-[#FFD700] mb-4" />
+              <h3 className="text-xl font-lilita text-[#191970] mb-2">Win to Earn</h3>
+              <p className="text-[#191970]/80">Earn real crypto rewards for every victory. The more you win, the more you earn!</p>
             </div>
           </div>
         </div>
@@ -197,25 +221,6 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="bg-white/50 p-8 rounded-lg backdrop-blur-sm max-w-3xl mx-auto hover:transform hover:scale-105 transition-all duration-300">
-            <h2 className="text-4xl font-lilita text-center text-[#191970] mb-6">About RPS Titans</h2>
-            <p className="text-[#191970]/90 text-lg mb-6">
-              RPS Titans revolutionizes the classic game of Rock Paper Scissors with modern gameplay mechanics,
-              competitive elements, and a vibrant community. Our mission is to create the most engaging and
-              strategic RPS experience ever made.
-            </p>
-            <p className="text-[#191970]/90 text-lg">
-              Whether you're a casual player looking for quick matches or a competitive gamer aiming for the top,
-              RPS Titans offers something for everyone. Join thousands of players worldwide in this exciting new
-              take on a timeless game.
-            </p>
           </div>
         </div>
       </section>
