@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
           <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">
             <MessageCircle className="w-5 h-5" />
           </a>
-          <a href="https://t.me/RPS_Titan_bot?game=RPSTitans">
+          <a href="https://t.me/RPS_Titans_bot?game=RPSTitans">
             <button className="bg-[#FFD700] text-[#191970] px-4 py-2 rounded-lg font-lilita hover:bg-[#FFD700]/90 hover:scale-105 transition-all">
               {isPartnerPage ? 'Add Bot' : 'Play Now'}
             </button>
@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
 
         {/* Mobile Menu - Play Now Button and Hamburger */}
         <div className="md:hidden flex items-center gap-3">
-          <a href="https://t.me/RPS_Titan_bot?game=RPSTitans">
+          <a href="https://t.me/RPS_Titans_bot?game=RPSTitans">
             <button className="bg-[#FFD700] text-[#191970] px-3 py-2 rounded-lg font-lilita text-sm hover:bg-[#FFD700]/90 hover:scale-105 transition-all">
               {isPartnerPage ? 'Add Bot' : 'Play Now'}
             </button>

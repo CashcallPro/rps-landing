@@ -48,7 +48,7 @@ function App() {
             Compete against players worldwide and become a true Titan!
           </p>
           <div className="flex gap-4 animate-slide-in-delay-2">
-            <a href="https://t.me/RPS_Titan_bot?game=RPSTitans">
+            <a href="https://t.me/RPS_Titans_bot?game=RPSTitans">
               <button className="bg-[#FFD700] text-[#191970] px-8 py-4 rounded-lg font-lilita text-lg hover:bg-[#FFD700]/90 hover:scale-105 transition-all">
                 Play Now
               </button>
