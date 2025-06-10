@@ -134,35 +134,6 @@ function App() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-20 px-4 bg-[#191970]/5">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-lilita text-center text-[#191970] mb-12">Game Features</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white/50 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
-              <GameController className="w-12 h-12 text-[#FFD700] mb-4" />
-              <h3 className="text-xl font-lilita text-[#191970] mb-2">Strategic Gameplay</h3>
-              <p className="text-[#191970]/80">Master the art of prediction and outsmart your opponents in intense RPS battles.</p>
-            </div>
-            <div className="bg-white/50 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
-              <Swords className="w-12 h-12 text-[#FFD700] mb-4" />
-              <h3 className="text-xl font-lilita text-[#191970] mb-2">Epic Tournaments</h3>
-              <p className="text-[#191970]/80">Compete in daily tournaments and climb the global leaderboards.</p>
-            </div>
-            <div className="bg-white/50 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
-              <Users className="w-12 h-12 text-[#FFD700] mb-4" />
-              <h3 className="text-xl font-lilita text-[#191970] mb-2">Multiplayer Battles</h3>
-              <p className="text-[#191970]/80">Challenge friends or face random opponents in real-time matches.</p>
-            </div>
-            <div className="bg-white/50 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
-              <Coins className="w-12 h-12 text-[#FFD700] mb-4" />
-              <h3 className="text-xl font-lilita text-[#191970] mb-2">Win to Earn</h3>
-              <p className="text-[#191970]/80">Earn real crypto rewards for every victory. The more you win, the more you earn!</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Roadmap Section */}
       <section className="py-20 px-4 bg-[#191970]" ref={roadmapRef}>
         <div className="container mx-auto">
@@ -220,6 +191,35 @@ function App() {
                   </ul>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 px-4 bg-[#191970]/5">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-lilita text-center text-[#191970] mb-12">Game Features</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white/50 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
+              <GameController className="w-12 h-12 text-[#FFD700] mb-4" />
+              <h3 className="text-xl font-lilita text-[#191970] mb-2">Strategic Gameplay</h3>
+              <p className="text-[#191970]/80">Master the art of prediction and outsmart your opponents in intense RPS battles.</p>
+            </div>
+            <div className="bg-white/50 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
+              <Swords className="w-12 h-12 text-[#FFD700] mb-4" />
+              <h3 className="text-xl font-lilita text-[#191970] mb-2">Epic Tournaments</h3>
+              <p className="text-[#191970]/80">Compete in daily tournaments and climb the global leaderboards.</p>
+            </div>
+            <div className="bg-white/50 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
+              <Users className="w-12 h-12 text-[#FFD700] mb-4" />
+              <h3 className="text-xl font-lilita text-[#191970] mb-2">Multiplayer Battles</h3>
+              <p className="text-[#191970]/80">Challenge friends or face random opponents in real-time matches.</p>
+            </div>
+            <div className="bg-white/50 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
+              <Coins className="w-12 h-12 text-[#FFD700] mb-4" />
+              <h3 className="text-xl font-lilita text-[#191970] mb-2">Win to Earn</h3>
+              <p className="text-[#191970]/80">Earn real crypto rewards for every victory. The more you win, the more you earn!</p>
             </div>
           </div>
         </div>
