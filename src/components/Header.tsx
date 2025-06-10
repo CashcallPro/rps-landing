@@ -51,14 +51,21 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-white hover:text-[#FFD700] transition-colors"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        {/* Mobile Menu - Play Now Button and Hamburger */}
+        <div className="md:hidden flex items-center gap-3">
+          <a href="https://t.me/RPS_Titan_bot?game=RPSTitans">
+            <button className="bg-[#FFD700] text-[#191970] px-3 py-2 rounded-lg font-lilita text-sm hover:bg-[#FFD700]/90 hover:scale-105 transition-all">
+              {isPartnerPage ? 'Add Bot' : 'Play Now'}
+            </button>
+          </a>
+          <button 
+            className="text-white hover:text-[#FFD700] transition-colors"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
 
         {/* Mobile Menu Overlay */}
         {isMenuOpen && (
@@ -99,12 +106,6 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
                 <MessageCircle className="w-5 h-5" />
               </a>
             </div>
-            
-            <a href="https://t.me/RPS_Titan_bot?game=RPSTitans" onClick={closeMenu}>
-              <button className="w-full bg-[#FFD700] text-[#191970] px-4 py-3 rounded-lg font-lilita hover:bg-[#FFD700]/90 transition-all mt-4">
-                {isPartnerPage ? 'Add Bot' : 'Play Now'}
-              </button>
-            </a>
           </div>
         </div>
       </nav>
