@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
         <div className="hidden md:flex gap-6 items-center">
           {isPartnerPage ? (
             <>
-              <a href="/" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Home</a>
+              <a href="/\" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Home</a>
               <a href="#how-it-works" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">How It Works</a>
               <a href="#earnings" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Earnings</a>
             </>
@@ -86,7 +86,7 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
           <div className="flex flex-col p-4 space-y-4">
             {isPartnerPage ? (
               <>
-                <a href="/" className="text-white hover:text-[#FFD700] transition-colors py-2" onClick={closeMenu}>Home</a>
+                <a href="/\" className="text-white hover:text-[#FFD700] transition-colors py-2\" onClick={closeMenu}>Home</a>
                 <a href="#how-it-works" className="text-white hover:text-[#FFD700] transition-colors py-2" onClick={closeMenu}>How It Works</a>
                 <a href="#earnings" className="text-white hover:text-[#FFD700] transition-colors py-2" onClick={closeMenu}>Earnings</a>
               </>
