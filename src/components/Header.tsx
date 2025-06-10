@@ -38,10 +38,10 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
               <a href="/partners" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Partners</a>
             </>
           )}
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">
+          <a href="https://x.com/RpsTitans_Game" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">
             <Twitter className="w-5 h-5" />
           </a>
-          <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">
+          <a href="https://t.me/rps_titans" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">
             <MessageCircle className="w-5 h-5" />
           </a>
           <a href="https://t.me/RPS_Titans_bot?game=RPSTitans">
@@ -99,10 +99,10 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
             )}
             
             <div className="flex gap-4 py-2">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FFD700] transition-colors">
+              <a href="https://x.com/RpsTitans_Game" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FFD700] transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FFD700] transition-colors">
+              <a href="https://t.me/rps_titans" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FFD700] transition-colors">
                 <MessageCircle className="w-5 h-5" />
               </a>
             </div>
