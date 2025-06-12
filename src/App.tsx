@@ -1,8 +1,12 @@
 import React, { useEffect, useRef } from 'react';
+import { Routes, Route, Link } from 'react-router-dom'; // Import Routes, Route, and Link
 import { TowerControl as GameController, Swords, Users, Coins } from 'lucide-react';
 import Header from './components/Header';
+import Partners from './components/Partners'; // Import Partners
+import EasterEggPage from './components/EasterEggPage'; // Import EasterEggPage
 
-function App() {
+// Define HomePageLayout component with the original content of App
+const HomePageLayout: React.FC = () => {
   const roadmapRef = useRef<HTMLDivElement>(null);
   const progressPercentage = 47; // This can be made dynamic later
 
@@ -29,7 +33,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[rgb(235,234,231)]">
-      {/* Header */}
+      {/* Header for Home Page */}
       <Header />
 
       {/* Hero Section */}
@@ -105,11 +109,12 @@ function App() {
             </div>
 
             <div className="mt-8">
-              <a href="/partners">
+              {/* This link should ideally be a <Link> component from react-router-dom if it's an internal link */}
+              <Link to="/partners">
                 <button className="bg-[#FFD700] text-[#191970] px-8 py-4 rounded-lg font-lilita text-lg hover:bg-[#FFD700]/90 hover:scale-105 transition-all shadow-lg">
                   Join Early Access Program
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -225,7 +230,7 @@ function App() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer for Home Page */}
       <footer className="bg-[#191970] text-white py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -242,6 +247,19 @@ function App() {
         </div>
       </footer>
     </div>
+  );
+};
+
+// Main App component now handles routing
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePageLayout />} />
+      <Route path="/partners" element={<Partners />} />
+      <Route path="/where-are-you" element={<EasterEggPage />} />
+      {/* You can add a 404 Not Found route here if needed */}
+      {/* <Route path="*" element={<NotFoundPage />} /> */}
+    </Routes>
   );
 }
 

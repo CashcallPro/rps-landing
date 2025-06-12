@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import { Menu, X, Twitter, MessageCircle } from 'lucide-react';
 
 interface HeaderProps {
@@ -20,14 +21,14 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
     <header className="bg-[#191970]/90 text-white py-4 fixed w-full top-0 z-50">
       <nav className="container mx-auto px-4 flex justify-between items-center">
         <div className="text-2xl font-lilita text-[#FFD700] hover:scale-105 transition-transform">
-          <a href="/">RPS Titans</a>
+          <Link to="/">RPS Titans</Link>
         </div>
         
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-6 items-center">
           {isPartnerPage ? (
             <>
-              <a href="/\" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Home</a>
+              <a href="https://rpstitans.xyz/" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Home</a>
               <a href="#how-it-works" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">How It Works</a>
               <a href="#earnings" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Earnings</a>
             </>
@@ -35,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
             <>
               <a href="#about" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">About</a>
               <a href="#features" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Features</a>
-              <a href="/partners" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Partners</a>
+              <Link to="/partners" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">Partners</Link>
             </>
           )}
           <a href="https://x.com/RpsTitans_Game" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD700] transition-colors hover:scale-105 transition-transform">
@@ -86,7 +87,7 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
           <div className="flex flex-col p-4 space-y-4">
             {isPartnerPage ? (
               <>
-                <a href="/\" className="text-white hover:text-[#FFD700] transition-colors py-2\" onClick={closeMenu}>Home</a>
+                <a href="https://rpstitans.xyz/" className="text-white hover:text-[#FFD700] transition-colors py-2" onClick={closeMenu}>Home</a>
                 <a href="#how-it-works" className="text-white hover:text-[#FFD700] transition-colors py-2" onClick={closeMenu}>How It Works</a>
                 <a href="#earnings" className="text-white hover:text-[#FFD700] transition-colors py-2" onClick={closeMenu}>Earnings</a>
               </>
@@ -94,7 +95,7 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
               <>
                 <a href="#about" className="text-white hover:text-[#FFD700] transition-colors py-2" onClick={closeMenu}>About</a>
                 <a href="#features" className="text-white hover:text-[#FFD700] transition-colors py-2" onClick={closeMenu}>Features</a>
-                <a href="/partners" className="text-white hover:text-[#FFD700] transition-colors py-2" onClick={closeMenu}>Partners</a>
+                <Link to="/partners" className="text-white hover:text-[#FFD700] transition-colors py-2" onClick={closeMenu}>Partners</Link>
               </>
             )}
             
