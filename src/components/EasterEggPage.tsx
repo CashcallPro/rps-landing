@@ -10,7 +10,7 @@ const EasterEggPage: React.FC = () => {
         congratulation! now you have access to whitelist
       </h1>
       <img
-        src="/images/easter-egg-image.png"
+        src="https://2qkxecp7fy.ufs.sh/f/2pbQotL8TqxAXL1QE5mBfDSimq0tZvprJnMWQb4couOAhH7U"
         alt="Easter Egg"
         className="max-w-sm w-full h-auto rounded-lg shadow-2xl mb-8"
       />
