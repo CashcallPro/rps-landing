@@ -146,12 +146,15 @@ function App() {
             <div className="space-y-24">
               <div className="roadmap-item relative pl-8 md:pl-0 md:ml-[calc(50%+2rem)]">
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border-2 border-[#FFD700] relative">
-                  <div className="absolute -top-4 left-4 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full font-lilita">Q2 2024</div>
-                  <h3 className="text-xl font-lilita text-white mt-4 mb-4">Beta Launch</h3>
+                  <div className="absolute -top-4 left-4 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full font-lilita">Q2 2025</div>
+                  <h3 className="text-xl font-lilita text-white mt-4 mb-4">Alpha Launch & Core Systems</h3>
                   <ul className="text-white/80 space-y-2">
-                    <li>• Core gameplay mechanics</li>
-                    <li>• Basic matchmaking</li>
-                    <li>• Player profiles</li>
+                    <li>🌍 Launch of official community channels (🇬🇧 Global, 🇮🇷 Iran, 🇹🇷 Turkey, 🇷🇺 Russia)</li>
+                    <li>🕹️ Alpha version launch of RPS Titans on Telegram</li>
+                    <li>⚙️ Core systems live: Real-time PvP multiplayer, Matchmaking, Referral system, Revenue-sharing for group admins</li>
+                    <li>⚔️ Titan Partner Whitelisting opens (first 100 Telegram Group Admins)</li>
+                    <li>🌐 Launch of landing page & early campaigns</li>
+                    <li>🧪 Closed gameplay loop testing & community feedback collection</li>
                   </ul>
                 </div>
               </div>
