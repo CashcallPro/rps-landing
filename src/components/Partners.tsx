@@ -315,7 +315,7 @@ const Partners = () => {
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-center md:text-left mb-4 md:mb-0">
                 <h3 className="text-xl font-lilita text-[#FFD700] mb-2">RPS Titans Partners</h3>
-                <p className="text-sm text-white/70">© 2024 RPS Titans. All rights reserved.</p>
+                <p className="text-sm text-white/70">© 2025 RPS Titans. All rights reserved.</p>
               </div>
               <div className="flex gap-6 items-center">
                 <a href="/" className="hover:text-[#FFD700] transition-colors">Home</a>
