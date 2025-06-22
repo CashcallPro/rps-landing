@@ -50,7 +50,7 @@ function App() {
           <div className="flex gap-4 animate-slide-in-delay-2">
             <a href="https://t.me/RPS_Titans_bot?game=RPSTitans">
               <button className="bg-[#FFD700] text-[#191970] px-8 py-4 rounded-lg font-lilita text-lg hover:bg-[#FFD700]/90 hover:scale-105 transition-all">
-                Play Now
+                Whitelist Now
               </button>
             </a>
             <button className="border-2 border-[#191970] text-[#191970] px-8 py-4 rounded-lg font-lilita text-lg hover:bg-[#191970]/10 hover:scale-105 transition-all">

@@ -46,7 +46,7 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
           </a>
           <a href="https://t.me/RPS_Titans_bot?game=RPSTitans">
             <button className="bg-[#FFD700] text-[#191970] px-4 py-2 rounded-lg font-lilita hover:bg-[#FFD700]/90 hover:scale-105 transition-all">
-              {isPartnerPage ? 'Add Bot' : 'Play Now'}
+              {isPartnerPage ? 'Add Bot' : 'Whitelist Now'}
             </button>
           </a>
         </div>
@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
         <div className="md:hidden flex items-center gap-3">
           <a href="https://t.me/RPS_Titans_bot?game=RPSTitans">
             <button className="bg-[#FFD700] text-[#191970] px-3 py-2 rounded-lg font-lilita text-sm hover:bg-[#FFD700]/90 hover:scale-105 transition-all">
-              {isPartnerPage ? 'Add Bot' : 'Play Now'}
+              {isPartnerPage ? 'Add Bot' : 'Whitelist Now'}
             </button>
           </a>
           <button 
