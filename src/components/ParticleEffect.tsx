@@ -17,35 +17,39 @@ const ParticleEffect: React.FC<ParticleEffectProps> = ({ density = 20 }) => {
     // Create particles
     for (let i = 0; i < density; i++) {
       const particle = document.createElement('div');
-      particle.className = 'particle';
+      particle.className = 'dust-particle';
       
-      // Random size
-      const sizes = ['small', 'medium', 'large'];
+      // Random size (more pixel-ish)
+      const sizes = ['tiny', 'small', 'medium'];
       const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
       particle.classList.add(randomSize);
       
-      // Random twinkle effect
-      if (Math.random() > 0.7) {
-        particle.classList.add('twinkle');
+      // Random glow effect
+      if (Math.random() > 0.6) {
+        particle.classList.add('glowing');
       }
       
-      // Random horizontal position
+      // Random position
       const randomLeft = Math.random() * 100;
+      const randomTop = Math.random() * 100;
       particle.style.left = `${randomLeft}%`;
+      particle.style.top = `${randomTop}%`;
       
       // Random animation delay
-      const randomDelay = Math.random() * 20;
+      const randomDelay = Math.random() * 10;
       particle.style.animationDelay = `${randomDelay}s`;
       
-      // Random horizontal drift
-      const randomDrift = (Math.random() - 0.5) * 100;
-      particle.style.setProperty('--random-x', `${randomDrift}px`);
+      // Random direction and distance
+      const randomX = (Math.random() - 0.5) * 200;
+      const randomY = (Math.random() - 0.5) * 200;
+      particle.style.setProperty('--random-x', `${randomX}px`);
+      particle.style.setProperty('--random-y', `${randomY}px`);
       
       container.appendChild(particle);
     }
   }, [density]);
 
-  return <div ref={containerRef} className="particles-container" />;
+  return <div ref={containerRef} className="dust-particles-container" />;
 };
 
 export default ParticleEffect;

@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'lilita': ['"Lilita One"', 'cursive'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
       },
     },
   },

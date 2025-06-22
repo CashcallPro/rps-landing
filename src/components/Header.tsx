@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
   return (
     <header className="bg-[#191970]/90 text-white py-4 fixed w-full top-0 z-50">
       <nav className="container mx-auto px-4 flex justify-between items-center">
-        <div className="text-2xl font-lilita text-[#FFD700] hover:scale-105 transition-transform">
+        <div className="text-2xl font-bold text-[#FFD700] hover:scale-105 transition-transform">
           <a href="/">RPS Titans</a>
         </div>
         
@@ -59,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
             <TelegramIcon className="w-5 h-5" />
           </a>
           <a href="https://t.me/RPS_Titans_bot?game=RPSTitans">
-            <button className="bg-[#FFD700] text-[#191970] px-4 py-2 rounded-lg font-lilita hover:bg-[#FFD700]/90 hover:scale-105 transition-all">
+            <button className="bg-[#FFD700] text-[#191970] px-4 py-2 rounded-lg font-bold hover:bg-[#FFD700]/90 hover:scale-105 transition-all">
               {isPartnerPage ? 'Add Bot' : 'Whitelist Now'}
             </button>
           </a>
@@ -68,7 +68,7 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
         {/* Mobile Menu - Play Now Button and Hamburger */}
         <div className="md:hidden flex items-center gap-3">
           <a href="https://t.me/RPS_Titans_bot?game=RPSTitans">
-            <button className="bg-[#FFD700] text-[#191970] px-3 py-2 rounded-lg font-lilita text-sm hover:bg-[#FFD700]/90 hover:scale-105 transition-all">
+            <button className="bg-[#FFD700] text-[#191970] px-3 py-2 rounded-lg font-bold text-sm hover:bg-[#FFD700]/90 hover:scale-105 transition-all">
               {isPartnerPage ? 'Add Bot' : 'Whitelist Now'}
             </button>
           </a>
@@ -91,7 +91,7 @@ const Header: React.FC<HeaderProps> = ({ isPartnerPage = false }) => {
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
           <div className="flex justify-between items-center p-4 border-b border-white/20">
-            <span className="text-lg font-lilita text-[#FFD700]">Menu</span>
+            <span className="text-lg font-bold text-[#FFD700]">Menu</span>
             <button onClick={closeMenu} className="text-white hover:text-[#FFD700]">
               <X className="w-6 h-6" />
             </button>
