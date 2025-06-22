@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Users, DollarSign, Zap, Shield, TrendingUp, Bot, Trophy, Target, Calculator } from 'lucide-react';
 import Header from './Header';
+import ParticleEffect from './ParticleEffect';
 
 // Modern Twitter/X Icon Component
 const TwitterXIcon = ({ className }: { className?: string }) => (
@@ -37,8 +38,9 @@ const Partners = () => {
       <Header isPartnerPage={true} />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-[#191970] to-[#191970]/80">
-        <div className="container mx-auto text-center">
+      <section className="relative pt-32 pb-16 px-4 bg-gradient-to-br from-[#191970] to-[#191970]/80 overflow-hidden">
+        <ParticleEffect density={25} />
+        <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-lilita text-white mb-4 animate-slide-in">
               🏆 RPS Titans – Become a Titan Partner
@@ -307,8 +309,9 @@ const Partners = () => {
       </section>
 
       {/* Limited Early Access */}
-      <section className="py-16 px-4 bg-gradient-to-r from-[#191970] to-[#191970]/80">
-        <div className="container mx-auto">
+      <section className="relative py-16 px-4 bg-gradient-to-r from-[#191970] to-[#191970]/80 overflow-hidden">
+        <ParticleEffect density={20} />
+        <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-lilita text-white mb-4">
               📊 Limited Early Access Program
@@ -337,11 +340,10 @@ const Partners = () => {
       </section>
 
       {/* Footer */}
-      <footer className="relative bg-gradient-to-b from-[#1a1a2e]/20 via-[#16213e]/60 to-[#0f1419] text-white">
-        {/* Faded gradient overlay at top */}
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-[#191970]/10 to-[#191970]/30 pointer-events-none"></div>
+      <footer className="relative bg-gradient-to-b from-[#1a1a2e]/20 via-[#16213e]/60 to-[#0f1419] text-white overflow-hidden">
+        <ParticleEffect density={30} />
         
-        <div className="relative pt-20 pb-8">
+        <div className="relative pt-20 pb-8 z-10">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mb-12">
               {/* Logo Section */}
