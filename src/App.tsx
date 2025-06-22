@@ -56,7 +56,7 @@ function App() {
             className="w-64 h-64 mb-8 animate-float"
           />
           <h1 className="text-5xl font-bold text-[#191970] mb-6 animate-slide-in">
-            Welcome to RPS Titans
+            Welcome to RPS TITANS
           </h1>
           <p className="text-xl text-[#191970]/90 mb-8 max-w-2xl animate-slide-in-delay-1">
             Experience the ultimate Rock Paper Scissors battle arena where strategy meets excitement.
@@ -299,7 +299,7 @@ function App() {
             {/* Bottom Bar */}
             <div className="border-t border-white/10 pt-6">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                <p className="text-white/60 text-sm">© 2025 RPS Titans. All rights reserved.</p>
+                <p className="text-white/60 text-sm">© 2025 RPS TITANS. All rights reserved.</p>
                 <div className="flex gap-6 text-sm">
                   <a href="/privacy" className="text-white/60 hover:text-[#FFD700] transition-colors">Privacy Policy</a>
                   <a href="/terms" className="text-white/60 hover:text-[#FFD700] transition-colors">Terms of Service</a>
