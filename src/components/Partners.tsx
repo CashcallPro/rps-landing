@@ -38,7 +38,7 @@ const Partners = () => {
       <Header isPartnerPage={true} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 px-4 bg-gradient-to-br from-[#191970] to-[#191970]/80 overflow-hidden">
+      <section className="relative pt-32 pb-16 px-4 bg-[#191970] overflow-hidden">
         <ParticleEffect density={25} />
         <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
@@ -171,7 +171,7 @@ const Partners = () => {
             </div>
 
             {/* Enhanced Example Calculation */}
-            <div className="bg-gradient-to-r from-[#191970] to-[#191970]/80 p-8 rounded-xl text-white">
+            <div className="bg-[#191970] p-8 rounded-xl text-white">
               <h3 className="text-2xl font-lilita mb-6 flex items-center justify-center">
                 <Calculator className="w-8 h-8 text-[#FFD700] mr-3" />
                 Real Example: Active Community
@@ -309,7 +309,7 @@ const Partners = () => {
       </section>
 
       {/* Limited Early Access */}
-      <section className="relative py-16 px-4 bg-gradient-to-r from-[#191970] to-[#191970]/80 overflow-hidden">
+      <section className="relative py-16 px-4 bg-[#191970] overflow-hidden">
         <ParticleEffect density={20} />
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -340,7 +340,7 @@ const Partners = () => {
       </section>
 
       {/* Footer */}
-      <footer className="relative bg-gradient-to-b from-[#1a1a2e]/20 via-[#16213e]/60 to-[#0f1419] text-white overflow-hidden">
+      <footer className="relative bg-[#191970] text-white overflow-hidden">
         <ParticleEffect density={30} />
         
         <div className="relative pt-20 pb-8 z-10">

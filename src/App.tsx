@@ -90,12 +90,12 @@ function App() {
       </section>
 
       {/* Early Access Titan Program Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-r from-[#191970] to-[#191970]/80 overflow-hidden">
+      <section className="relative py-20 px-4 bg-[#191970] overflow-hidden">
         <ParticleEffect density={25} />
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-lilita text-white mb-6">
-              🎯 Early Access Titan Program
+              Early Access Titan Program
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               We're onboarding 100 Telegram groups in our exclusive pre-launch rev-share phase.
@@ -256,7 +256,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="relative bg-gradient-to-b from-[#1a1a2e]/20 via-[#16213e]/60 to-[#0f1419] text-white overflow-hidden">
+      <footer className="relative bg-[#191970] text-white overflow-hidden">
         <ParticleEffect density={30} />
         
         <div className="relative pt-20 pb-8 z-10">
