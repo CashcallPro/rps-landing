@@ -151,7 +151,7 @@ function App() {
       </section>
 
       {/* Roadmap Section */}
-      <section className="py-20 px-4 bg-[#191970]" ref={roadmapRef}>
+      <section id="roadmap" className="py-20 px-4 bg-[#191970]" ref={roadmapRef}>
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center text-white mb-4">Development Roadmap</h2>
           <p className="text-center text-[#FFD700] font-bold mb-16">Our path to RPS greatness</p>
@@ -264,7 +264,7 @@ function App() {
                 <ul className="space-y-3">
                   <li><a href="#about" className="text-white/70 hover:text-[#FFD700] transition-colors text-sm">About</a></li>
                   <li><a href="#features" className="text-white/70 hover:text-[#FFD700] transition-colors text-sm">Features</a></li>
-                  <li><span className="text-white/40 text-sm">Gameplay (coming soon)</span></li>
+                  <li><a href="#roadmap" className="text-white/70 hover:text-[#FFD700] transition-colors text-sm">Roadmap</a></li>
                   <li><span className="text-white/40 text-sm">Tournaments (coming soon)</span></li>
                 </ul>
               </div>
@@ -292,12 +292,6 @@ function App() {
                      className="text-white/70 hover:text-[#FFD700] transition-colors hover:scale-110 transform">
                     <TelegramIcon className="w-6 h-6" />
                   </a>
-                </div>
-                <div className="space-y-3">
-                  <div>
-                    <h5 className="text-white font-semibold text-sm mb-1">Contact</h5>
-                    <p className="text-white/70 text-sm">support@rpstitans.xyz</p>
-                  </div>
                 </div>
               </div>
             </div>
