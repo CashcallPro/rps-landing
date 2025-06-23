@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { TowerControl as GameController, Swords, Users, Coins, Check, Gamepad2, Vault, TrendingUp, Award, RefreshCw } from 'lucide-react';
+import { TowerControl as GameController, Swords, Users, Coins, Check, Gamepad2, Vault, TrendingUp, Award } from 'lucide-react';
 import Header from './components/Header';
 import ParticleEffect from './components/ParticleEffect';
 
@@ -117,7 +117,7 @@ function App() {
               We're onboarding 200 Telegram groups in our exclusive pre-launch rev-share phase.
             </p>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
               <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
                 <Gamepad2 className="w-8 h-8 text-white mb-3 mx-auto" />
                 <h3 className="text-lg font-bold text-[#FFD700] mb-2">Early access to the game bot</h3>
@@ -130,20 +130,16 @@ function App() {
                 <TrendingUp className="w-8 h-8 text-white mb-3 mx-auto" />
                 <h3 className="text-lg font-bold text-[#FFD700] mb-2">Earn revenue from every match played in your group</h3>
               </div>
-              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300 md:col-span-2 lg:col-span-1">
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
                 <Award className="w-8 h-8 text-white mb-3 mx-auto" />
                 <h3 className="text-lg font-bold text-[#FFD700] mb-2">Permanent 'OG Titan' badge</h3>
-              </div>
-              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300 md:col-span-2 lg:col-span-2">
-                <RefreshCw className="w-8 h-8 text-white mb-3 mx-auto" />
-                <h3 className="text-lg font-bold text-[#FFD700] mb-2">50% bonus on referrals during launch week</h3>
               </div>
             </div>
 
             {/* Enhanced Progress Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="flex justify-between items-center mb-4">
-                <span className="text-white font-bold text-lg">Groups Onboarded</span>
+                <span className="text-white font-bold text-lg">OG Titans Onboarded</span>
                 <span className="text-[#FFD700] font-bold text-lg">{progressPercentage}/200</span>
               </div>
               <div className="w-full bg-white/20 rounded-full h-8 overflow-hidden progress-bar-container">
@@ -161,7 +157,7 @@ function App() {
             <div className="mt-8">
               <a href="/partners">
                 <button className="bg-[#FFD700] text-[#191970] px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#FFD700]/90 hover:scale-105 transition-all shadow-lg">
-                  Join OG Titans Program
+                  Join Titans Whitelist
                 </button>
               </a>
             </div>

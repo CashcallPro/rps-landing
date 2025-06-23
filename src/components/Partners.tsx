@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, Users, DollarSign, Zap, Shield, TrendingUp, Bot, Trophy, Target, Calculator, Check, Gamepad2, Vault, Award, RefreshCw } from 'lucide-react';
+import { ArrowRight, Users, DollarSign, Zap, Shield, TrendingUp, Bot, Trophy, Target, Calculator, Check, Gamepad2, Vault, Award } from 'lucide-react';
 import Header from './Header';
 import ParticleEffect from './ParticleEffect';
 
@@ -108,7 +108,7 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* How Earnings Work - Updated with Deep Purple Background */}
+      {/* How Earnings Work - Two Part Section */}
       <section id="earnings" className="relative py-20 px-4 bg-gradient-to-br from-[#4A148C] via-[#6A1B9A] to-[#7B1FA2] overflow-hidden">
         <ParticleEffect density={30} />
         <div className="container mx-auto relative z-10">
@@ -120,7 +120,7 @@ const Partners = () => {
               Every match in RPS Titans generates rewards — not just for players, but also for you.
             </p>
 
-            {/* Enhanced Per Game Round with Glassy Design */}
+            {/* Part 1: Per Game Round Breakdown */}
             <div className="bg-white/10 backdrop-blur-xl p-10 rounded-2xl border border-white/20 shadow-2xl mb-12 scroll-animate scale-in">
               <h3 className="text-3xl font-bold text-white mb-8 flex items-center justify-center">
                 <Trophy className="w-10 h-10 text-[#FFD700] mr-4" />
@@ -207,7 +207,7 @@ const Partners = () => {
               </div>
             </div>
 
-            {/* Enhanced Example Calculation with Glassy Design */}
+            {/* Part 2: Real Example: Active Community */}
             <div className="bg-white/10 backdrop-blur-xl p-10 rounded-2xl border border-white/20 shadow-2xl scroll-animate slide-in-right">
               <h3 className="text-3xl font-bold mb-8 flex items-center justify-center text-white">
                 <Calculator className="w-10 h-10 text-[#FFD700] mr-4" />
@@ -362,14 +362,14 @@ const Partners = () => {
 
             <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 mb-6 scroll-animate scale-in">
               <div className="text-5xl font-bold text-[#FFD700] mb-3">{currentProgress}/200</div>
-              <div className="text-lg text-white">Partners Onboarded</div>
+              <div className="text-lg text-white">OG Titans Onboarded</div>
               <div className="text-[#FFD700] font-bold mt-2 text-sm">{200 - currentProgress} spots remaining • Limited Time • Exclusive Access</div>
             </div>
 
             <div className="scroll-animate bounce-in">
               <a href="https://t.me/RPS_Titans_bot">
                 <button className="bg-[#FFD700] text-[#191970] px-8 py-4 rounded-lg font-bold text-xl hover:bg-[#FFD700]/90 hover:scale-105 transition-all shadow-lg flex items-center gap-3 mx-auto">
-                  Become a Titan Partner
+                  Join Titans Whitelist
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </a>
