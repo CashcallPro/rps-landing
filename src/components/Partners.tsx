@@ -71,12 +71,7 @@ const Partners = () => {
             <p className="text-lg text-white/90 mb-4 animate-slide-in-delay-2">
               Host the bot. Earn passive income. It's that simple.
             </p>
-            <p className="text-lg text-white/90 mb-3 animate-slide-in-delay-2">
-              We're onboarding just <span className="text-[#FFD700] font-bold">200 Titan Partners</span> before public launch.
-            </p>
-            <p className="text-base text-white/80 mb-6 animate-slide-in-delay-2">
-              Get in early to claim your community's spot and maximize earnings.
-            </p>
+            
           </div>
         </div>
       </section>

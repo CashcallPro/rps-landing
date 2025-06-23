@@ -17,14 +17,13 @@ const TelegramIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// Dynamic progress calculation - Updated to show 127/200 (73 empty spots)
+// Dynamic progress calculation 
 const calculateProgress = () => {
-  const startDate = new Date('2025-01-01').getTime();
+  const startDate = new Date('2025-06-23').getTime();
   const currentDate = new Date().getTime();
   const daysSinceStart = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
   
-  // Start from 127 partners (73 empty spots)
-  let progress = 127;
+  let progress = 93;
   
   // Add random progress for each day that has passed
   for (let i = 0; i < daysSinceStart; i++) {
@@ -41,7 +40,7 @@ const calculateProgress = () => {
 
 function App() {
   const roadmapRef = useRef<HTMLDivElement>(null);
-  const [progressPercentage, setProgressPercentage] = useState(127);
+  const [progressPercentage, setProgressPercentage] = useState(0);
 
   useEffect(() => {
     // Calculate dynamic progress
@@ -86,11 +85,10 @@ function App() {
             TO RPS TITANS
           </h1>
           <p className="text-2xl md:text-3xl text-[#191970] mb-4 font-bold animate-slide-in-delay-1 italic">
-            RPS Titans is more than a game
+            
           </p>
           <p className="text-lg md:text-xl text-[#191970]/90 mb-8 max-w-2xl animate-slide-in-delay-2 leading-relaxed">
-            It's a brand, a movement,<br />
-            and a New Era of Play.
+            Onlien PvP • Win-to-Earn • Built on TON<br />
           </p>
           <div className="flex gap-4 animate-slide-in-delay-2">
             <a href="https://t.me/RPS_Titans_bot?game=RPSTitans">
@@ -130,12 +128,14 @@ function App() {
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
-              OG Titans Partnership Program
+              TITANS PARTNERSHIP PROGRAM
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              We're onboarding 200 Telegram groups in our exclusive pre-launch rev-share phase.
+              We're onboarding just <span className="text-[#FFD700] font-bold">200 Titan Partners</span> in our exclusive pre-launch before public launch.
             </p>
-            
+            <p className="text-base text-white/80 mb-6 animate-slide-in-delay-2">
+              Get in early to claim your community's spot and maximize earnings.
+            </p>
             <div className="grid md:grid-cols-2 gap-6 mb-12">
               <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
                 <Gamepad2 className="w-8 h-8 text-white mb-3 mx-auto" />
@@ -143,7 +143,7 @@ function App() {
               </div>
               <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
                 <Vault className="w-8 h-8 text-white mb-3 mx-auto" />
-                <h3 className="text-lg font-bold text-[#FFD700] mb-2">300 $GRPS tokens in your vault</h3>
+                <h3 className="text-lg font-bold text-[#FFD700] mb-2">300 tokens in your vault</h3>
               </div>
               <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
                 <TrendingUp className="w-8 h-8 text-white mb-3 mx-auto" />
@@ -198,16 +198,17 @@ function App() {
         
         <div className="container mx-auto relative z-10">
           <div className="bg-white/50 p-8 rounded-lg backdrop-blur-sm max-w-3xl mx-auto hover:transform hover:scale-105 transition-all duration-300">
-            <h2 className="text-4xl font-bold text-center text-[#191970] mb-6">About RPS Titans</h2>
+            <h2 className="text-4xl font-bold text-center text-[#191970] mb-6">ABOUT GAME</h2>
             <p className="text-[#191970]/90 text-lg mb-6">
-              RPS Titans revolutionizes the classic game of Rock Paper Scissors with modern gameplay mechanics,
-              competitive elements, and a vibrant community. Our mission is to create the most engaging and
-              strategic RPS experience ever made.
-            </p>
+RPS Titans reimagines the legendary Rock-Paper-Scissors as a real-time, high-stakes online multiplayer PvP game built natively for Telegram. No downloads. No waiting. Just instant matchmaking, fast duels, and real opponents — or human-like bots if no one's around.            </p>
             <p className="text-[#191970]/90 text-lg">
-              Whether you're a casual player looking for quick matches or a competitive gamer aiming for the top,
-              RPS Titans offers something for everyone. Join thousands of players worldwide in this exciting new
-              take on a timeless game.
+              Each round is win-to-earn. Players pay a small entry fee in in-game coins, and the winner takes the pot—minus a 10% platform fee. It's simple, addictive, and designed for both casual players and serious earners. Backed by the TON blockchain and a growing reward ecosystem, RPS Titans is where gaming meets real value.
+
+
+
+
+
+
             </p>
           </div>
         </div>
@@ -217,7 +218,7 @@ function App() {
       <section id="roadmap" className="relative py-32 px-4 bg-[#191970] overflow-hidden" ref={roadmapRef}>
         <ParticleEffect density={25} />
         <div className="container mx-auto relative z-10">
-          <h2 className="text-4xl font-bold text-center text-white mb-4">Development Roadmap</h2>
+          <h2 className="text-4xl font-bold text-center text-white mb-4">DEVELOPMENT ROADMAP</h2>
           <p className="text-center text-[#FFD700] font-bold mb-16">Our path to RPS greatness</p>
 
           <div className="relative max-w-2xl mx-auto">
@@ -227,7 +228,7 @@ function App() {
               <div className="roadmap-item relative pl-8 md:pl-0 md:ml-[calc(50%+2rem)]">
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border-2 border-[#FFD700] relative">
                   <div className="absolute -top-4 left-4 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full font-bold">Q2 2025</div>
-                  <h3 className="text-xl font-bold text-white mt-4 mb-4">Genesis Titans</h3>
+                  <h3 className="text-xl font-bold text-white mt-4 mb-4">Titans Awakens</h3>
                   <ul className="text-white/80 space-y-2">
                     <li className="flex items-center gap-2">
                       <Check className="w-4 h-4 text-[#FFD700] flex-shrink-0" />
@@ -261,11 +262,11 @@ function App() {
               <div className="roadmap-item relative pl-8 md:pl-0 md:ml-[calc(50%+2rem)]">
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border-2 border-[#FFD700] relative">
                   <div className="absolute -top-4 left-4 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full font-bold">Q4 2025</div>
-                  <h3 className="text-xl font-bold text-white mt-4 mb-4">Titans Awakens</h3>
+                  <h3 className="text-xl font-bold text-white mt-4 mb-4">Titans Genesis</h3>
                   <ul className="text-white/80 space-y-2">
                     <li>• More Win2Earn Game-Modes</li>
                     <li>• Clan Wars Begin</li>
-                    <li>• $GRPS Token Launch</li>
+                    <li>• Token Launch</li>
                   </ul>
                 </div>
               </div>
@@ -275,6 +276,7 @@ function App() {
                   <div className="absolute -top-4 left-4 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full font-bold">Q1 2026</div>
                   <h3 className="text-xl font-bold text-white mt-4 mb-4">Alpha Launch</h3>
                   <ul className="text-white/80 space-y-2">
+                    <li>• TON-Powered Earnings</li>
                     <li>• Tournaments</li>
                     <li>• Staking Unlockables</li>
                   </ul>
@@ -288,12 +290,12 @@ function App() {
       {/* Features Section */}
       <section id="features" className="py-20 px-4 bg-[#191970]/5">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center text-[#191970] mb-12">Game Features</h2>
+          <h2 className="text-4xl font-bold text-center text-[#191970] mb-12">GAME FEATURES</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white/50 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
               <GameController className="w-12 h-12 text-[#FFD700] mb-4" />
               <h3 className="text-xl font-bold text-[#191970] mb-2">Strategic Gameplay</h3>
-              <p className="text-[#191970]/80">Master the art of prediction and outsmart your opponents in intense RPS battles.</p>
+              <p className="text-[#191970]/80">It’s not just luck 💫 it’s psychology. Outsmart real opponents in lightning-fast RPS duels where every move counts.</p>
             </div>
             <div className="bg-white/50 p-6 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
               <Swords className="w-12 h-12 text-[#FFD700] mb-4" />
