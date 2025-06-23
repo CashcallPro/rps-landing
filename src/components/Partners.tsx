@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowRight, Users, DollarSign, Zap, Shield, TrendingUp, Bot, Trophy, Target, Calculator, Check } from 'lucide-react';
 import Header from './Header';
 import ParticleEffect from './ParticleEffect';
@@ -18,7 +18,16 @@ const TelegramIcon = ({ className }: { className?: string }) => (
 );
 
 const Partners = () => {
+  const [scrollY, setScrollY] = useState(0);
+
   useEffect(() => {
+    // Parallax scroll effect
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -37,7 +46,10 @@ const Partners = () => {
     const animatedElements = document.querySelectorAll('.scroll-animate');
     animatedElements.forEach((element) => observer.observe(element));
 
-    return () => observer.disconnect();
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   return (
@@ -56,9 +68,10 @@ const Partners = () => {
             <p className="text-xl md:text-2xl text-[#FFD700] mb-3 font-bold animate-slide-in-delay-1">
               Earn every time your community plays.
             </p>
-            <p className="text-lg text-white/90 mb-6 animate-slide-in-delay-2">
+            <p className="text-lg text-white/90 mb-4 animate-slide-in-delay-2">
               Host the bot. Earn passive income. It's that simple.
             </p>
+            
           </div>
         </div>
       </section>
@@ -80,66 +93,88 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* How Earnings Work */}
-      <section id="earnings" className="py-16 px-4 bg-[#191970]/5">
-        <div className="container mx-auto">
+      {/* How Earnings Work - Two Part Section with Image Title, Updated Background, and Parallax Image */}
+      <section id="earnings" className="relative py-20 px-4 overflow-hidden" style={{ backgroundColor: 'rgb(25, 25, 108)' }}>
+        <ParticleEffect density={30} />
+        
+        {/* Parallax Image positioned absolutely on the right */}
+        <div 
+          className="absolute right-0 top-0 w-64 md:w-80 lg:w-96 h-full z-10 pointer-events-none"
+          style={{
+            transform: `translateY(${scrollY * -0.5}px)`,
+            transition: 'transform 0.1s ease-out'
+          }}
+        >
+          <img
+            src="/image copy copy.png"
+            alt="Parallax Coins"
+            className="w-full h-auto object-contain opacity-30"
+          />
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-[#191970] mb-8 text-center scroll-animate fade-in-up">
-              💸 How Earnings Work
-            </h2>
-            <p className="text-lg text-[#191970]/90 mb-8 text-center scroll-animate fade-in-up">
+            {/* Image Title */}
+            <div className="text-center mb-8 scroll-animate fade-in-up">
+              <img
+                src="/image copy.png"
+                alt="How Earnings Work"
+                className="mx-auto max-w-md w-full h-auto"
+              />
+            </div>
+            <p className="text-xl text-white/90 mb-12 text-center scroll-animate fade-in-up leading-relaxed">
               Every match in RPS Titans generates rewards — not just for players, but also for you.
             </p>
 
-            {/* Enhanced Per Game Round */}
-            <div className="bg-gradient-to-br from-white/60 to-white/40 p-8 rounded-xl backdrop-blur-sm mb-8 border border-[#FFD700]/20 scroll-animate scale-in">
-              <h3 className="text-2xl font-bold text-[#191970] mb-6 flex items-center justify-center">
-                <Trophy className="w-8 h-8 text-[#FFD700] mr-3" />
+            {/* Part 1: Per Game Round Breakdown */}
+            <div className="bg-white/10 backdrop-blur-xl p-10 rounded-2xl border border-white/20 shadow-2xl mb-12 scroll-animate scale-in">
+              <h3 className="text-3xl font-bold text-white mb-8 flex items-center justify-center">
+                <Trophy className="w-10 h-10 text-[#FFD700] mr-4" />
                 Per Game Round Breakdown
               </h3>
 
-              <div className="grid lg:grid-cols-2 gap-8">
+              <div className="grid lg:grid-cols-2 gap-10">
                 {/* Game Flow */}
-                <div className="space-y-4">
-                  <div className="bg-[#191970]/10 p-4 rounded-lg border-l-4 border-[#FFD700] scroll-animate slide-in-left">
-                    <div className="flex items-center mb-2">
-                      <Target className="w-5 h-5 text-[#FFD700] mr-2" />
-                      <span className="font-bold text-[#191970]">Game Setup</span>
+                <div className="space-y-6">
+                  <div className="bg-white/15 backdrop-blur-sm p-6 rounded-xl border border-white/20 border-l-4 border-l-[#FFD700] scroll-animate slide-in-left shadow-lg">
+                    <div className="flex items-center mb-3">
+                      <Target className="w-6 h-6 text-[#FFD700] mr-3" />
+                      <span className="font-bold text-white text-lg">Game Setup</span>
                     </div>
-                    <p className="text-sm text-[#191970]/80">2 Players join and stake 10 tokens each</p>
+                    <p className="text-white/80 mb-3">2 Players join and stake 10 tokens each</p>
                     <div className="text-right">
-                      <span className="text-lg font-bold text-[#FFD700]">20 tokens total</span>
+                      <span className="text-2xl font-bold text-[#FFD700]">20 tokens total</span>
                     </div>
                   </div>
 
-                  <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500 scroll-animate slide-in-left">
-                    <div className="flex items-center mb-2">
-                      <Trophy className="w-5 h-5 text-green-600 mr-2" />
-                      <span className="font-bold text-green-700">Winner Takes</span>
+                  <div className="bg-emerald-500/20 backdrop-blur-sm p-6 rounded-xl border border-emerald-400/30 border-l-4 border-l-emerald-400 scroll-animate slide-in-left shadow-lg">
+                    <div className="flex items-center mb-3">
+                      <Trophy className="w-6 h-6 text-emerald-400 mr-3" />
+                      <span className="font-bold text-emerald-100 text-lg">Winner Takes</span>
                     </div>
-                    <p className="text-sm text-green-600">90% of the total pot goes to winner</p>
+                    <p className="text-emerald-200/80 mb-3">90% of the total pot goes to winner</p>
                     <div className="text-right">
-                      <span className="text-lg font-bold text-green-600">18 tokens</span>
+                      <span className="text-2xl font-bold text-emerald-400">18 tokens</span>
                     </div>
                   </div>
 
-                  <div className="bg-[#FFD700]/20 p-4 rounded-lg border-l-4 border-[#FFD700] scroll-animate slide-in-left">
-                    <div className="flex items-center mb-2">
-                      <Calculator className="w-5 h-5 text-[#191970] mr-2" />
-                      <span className="font-bold text-[#191970]">Fee Distribution (2 tokens)</span>
+                  <div className="bg-[#FFD700]/20 backdrop-blur-sm p-6 rounded-xl border border-[#FFD700]/30 border-l-4 border-l-[#FFD700] scroll-animate slide-in-left shadow-lg">
+                    <div className="flex items-center mb-4">
+                      <Calculator className="w-6 h-6 text-[#FFD700] mr-3" />
+                      <span className="font-bold text-white text-lg">Fee Distribution (2 tokens)</span>
                     </div>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between items-center">
-                        <span className="text-[#191970]/70">• RPS Titans ecosystem</span>
-                        <span className="font-bold text-[#191970]">1.0 token (50%)</span>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
+                        <span className="text-white/80">• RPS Titans ecosystem</span>
+                        <span className="font-bold text-white">1.0 token (50%)</span>
                       </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-[#191970]/70">• Player reward pool</span>
-                        <span className="font-bold text-[#191970]">0.5 token (25%)</span>
+                      <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
+                        <span className="text-white/80">• Player reward pool</span>
+                        <span className="font-bold text-white">0.5 token (25%)</span>
                       </div>
-                      <div className="flex justify-between items-center bg-[#FFD700]/30 p-2 rounded">
-                        <span className="text-[#191970] font-semibold">• You as Titan Partner</span>
-                        <span className="font-bold text-[#191970] font-bold">0.5 token (25%)</span>
+                      <div className="flex justify-between items-center p-3 bg-[#FFD700]/30 backdrop-blur-sm rounded-lg border border-[#FFD700]/50">
+                        <span className="text-white font-semibold">• You as Titan Partner</span>
+                        <span className="font-bold text-[#FFD700] text-lg">0.5 token (25%)</span>
                       </div>
                     </div>
                   </div>
@@ -147,76 +182,76 @@ const Partners = () => {
 
                 {/* Visual Summary */}
                 <div className="flex flex-col justify-center">
-                  <div className="text-center p-6 bg-gradient-to-br from-[#FFD700]/30 to-[#FFD700]/10 rounded-xl border-2 border-[#FFD700] mb-4 scroll-animate bounce-in">
-                    <DollarSign className="w-16 h-16 text-[#FFD700] mx-auto mb-3" />
-                    <div className="text-3xl font-bold text-[#191970] mb-2">0.25 tokens</div>
-                    <div className="text-sm text-[#191970]/70 mb-3">per player, per game</div>
-                    <div className="text-xs text-[#191970]/60 bg-white/50 p-2 rounded">
+                  <div className="text-center p-8 bg-gradient-to-br from-[#FFD700]/30 via-[#FFD700]/20 to-[#FFD700]/10 backdrop-blur-xl rounded-2xl border-2 border-[#FFD700]/50 mb-6 scroll-animate bounce-in shadow-2xl">
+                    <DollarSign className="w-20 h-20 text-[#FFD700] mx-auto mb-4" />
+                    <div className="text-4xl font-bold text-white mb-3">0.25 tokens</div>
+                    <div className="text-lg text-white/80 mb-4">per player, per game</div>
+                    <div className="text-sm text-white/70 bg-white/20 backdrop-blur-sm p-3 rounded-lg border border-white/30">
                       = 25% of all game fees
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-3 text-center">
-                    <div className="bg-white/50 p-3 rounded-lg scroll-animate fade-in-up">
-                      <div className="text-lg font-bold text-[#191970]">10</div>
-                      <div className="text-xs text-[#191970]/60">tokens staked</div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white/15 backdrop-blur-sm p-4 rounded-xl border border-white/20 text-center scroll-animate fade-in-up shadow-lg">
+                      <div className="text-2xl font-bold text-white">10</div>
+                      <div className="text-sm text-white/70">tokens staked</div>
                     </div>
-                    <div className="bg-white/50 p-3 rounded-lg scroll-animate fade-in-up">
-                      <div className="text-lg font-bold text-[#191970]">2</div>
-                      <div className="text-xs text-[#191970]/60">players</div>
+                    <div className="bg-white/15 backdrop-blur-sm p-4 rounded-xl border border-white/20 text-center scroll-animate fade-in-up shadow-lg">
+                      <div className="text-2xl font-bold text-white">2</div>
+                      <div className="text-sm text-white/70">players</div>
                     </div>
-                    <div className="bg-white/50 p-3 rounded-lg scroll-animate fade-in-up">
-                      <div className="text-lg font-bold text-[#FFD700]">0.5</div>
-                      <div className="text-xs text-[#191970]/60">your share</div>
+                    <div className="bg-white/15 backdrop-blur-sm p-4 rounded-xl border border-white/20 text-center scroll-animate fade-in-up shadow-lg">
+                      <div className="text-2xl font-bold text-[#FFD700]">0.5</div>
+                      <div className="text-sm text-white/70">your share</div>
                     </div>
-                    <div className="bg-white/50 p-3 rounded-lg scroll-animate fade-in-up">
-                      <div className="text-lg font-bold text-green-600">18</div>
-                      <div className="text-xs text-[#191970]/60">winner gets</div>
+                    <div className="bg-white/15 backdrop-blur-sm p-4 rounded-xl border border-white/20 text-center scroll-animate fade-in-up shadow-lg">
+                      <div className="text-2xl font-bold text-emerald-400">18</div>
+                      <div className="text-sm text-white/70">winner gets</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Enhanced Example Calculation */}
-            <div className="bg-[#191970] p-8 rounded-xl text-white scroll-animate slide-in-right">
-              <h3 className="text-2xl font-bold mb-6 flex items-center justify-center">
-                <Calculator className="w-8 h-8 text-[#FFD700] mr-3" />
+            {/* Part 2: Real Example: Active Community */}
+            <div className="bg-white/10 backdrop-blur-xl p-10 rounded-2xl border border-white/20 shadow-2xl scroll-animate slide-in-right">
+              <h3 className="text-3xl font-bold mb-8 flex items-center justify-center text-white">
+                <Calculator className="w-10 h-10 text-[#FFD700] mr-4" />
                 Real Example: Active Community
               </h3>
               
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <div className="bg-white/10 p-4 rounded-lg scroll-animate fade-in-left">
-                    <div className="text-sm text-white/70 mb-1">Community Size</div>
-                    <div className="text-2xl font-bold text-[#FFD700]">50 active players</div>
+              <div className="grid md:grid-cols-2 gap-10">
+                <div className="space-y-6">
+                  <div className="bg-white/15 backdrop-blur-sm p-6 rounded-xl border border-white/20 scroll-animate fade-in-left shadow-lg">
+                    <div className="text-sm text-white/70 mb-2">Community Size</div>
+                    <div className="text-3xl font-bold text-[#FFD700]">50 active players</div>
                   </div>
-                  <div className="bg-white/10 p-4 rounded-lg scroll-animate fade-in-left">
-                    <div className="text-sm text-white/70 mb-1">Daily Activity</div>
-                    <div className="text-2xl font-bold text-[#FFD700]">3 rounds per player</div>
+                  <div className="bg-white/15 backdrop-blur-sm p-6 rounded-xl border border-white/20 scroll-animate fade-in-left shadow-lg">
+                    <div className="text-sm text-white/70 mb-2">Daily Activity</div>
+                    <div className="text-3xl font-bold text-[#FFD700]">3 rounds per player</div>
                   </div>
-                  <div className="bg-white/10 p-4 rounded-lg scroll-animate fade-in-left">
-                    <div className="text-sm text-white/70 mb-1">Total Daily Rounds</div>
-                    <div className="text-2xl font-bold text-[#FFD700]">150 rounds</div>
+                  <div className="bg-white/15 backdrop-blur-sm p-6 rounded-xl border border-white/20 scroll-animate fade-in-left shadow-lg">
+                    <div className="text-sm text-white/70 mb-2">Total Daily Rounds</div>
+                    <div className="text-3xl font-bold text-[#FFD700]">150 rounds</div>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="bg-[#FFD700]/20 p-4 rounded-lg border border-[#FFD700] scroll-animate fade-in-right">
-                    <div className="text-sm text-white/70 mb-1">Daily Earnings</div>
-                    <div className="text-3xl font-bold text-[#FFD700]">75 tokens</div>
-                    <div className="text-xs text-white/60">150 rounds × 0.5 tokens</div>
+                <div className="space-y-6">
+                  <div className="bg-[#FFD700]/20 backdrop-blur-sm p-6 rounded-xl border-2 border-[#FFD700]/50 scroll-animate fade-in-right shadow-2xl">
+                    <div className="text-sm text-white/70 mb-2">Daily Earnings</div>
+                    <div className="text-4xl font-bold text-[#FFD700]">75 tokens</div>
+                    <div className="text-xs text-white/60 mt-2">150 rounds × 0.5 tokens</div>
                   </div>
-                  <div className="bg-[#FFD700]/20 p-4 rounded-lg border border-[#FFD700] scroll-animate fade-in-right">
-                    <div className="text-sm text-white/70 mb-1">Monthly Earnings</div>
-                    <div className="text-3xl font-bold text-[#FFD700]">2,250+ tokens</div>
-                    <div className="text-xs text-white/60">75 tokens × 30 days</div>
+                  <div className="bg-[#FFD700]/20 backdrop-blur-sm p-6 rounded-xl border-2 border-[#FFD700]/50 scroll-animate fade-in-right shadow-2xl">
+                    <div className="text-sm text-white/70 mb-2">Monthly Earnings</div>
+                    <div className="text-4xl font-bold text-[#FFD700]">2,250+ tokens</div>
+                    <div className="text-xs text-white/60 mt-2">75 tokens × 30 days</div>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-6 p-4 bg-white/10 rounded-lg border border-[#FFD700]/50 scroll-animate pulse-glow">
-                <p className="text-center text-[#FFD700] font-bold text-lg">
+              <div className="mt-8 p-6 bg-white/15 backdrop-blur-sm rounded-xl border-2 border-[#FFD700]/50 scroll-animate pulse-glow shadow-xl">
+                <p className="text-center text-[#FFD700] font-bold text-xl">
                   💰 Passive income that grows with your community engagement!
                 </p>
               </div>
@@ -225,9 +260,39 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* Why Join */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
+      {/* Why Join with Parallax Coin Images */}
+      <section className="relative py-16 px-4 overflow-hidden">
+        {/* Left Coin Image with Parallax - Moves up as user scrolls down */}
+        <div 
+          className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none"
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`,
+            transition: 'transform 0.1s ease-out'
+          }}
+        >
+          <img
+            src="/coins-left.png"
+            alt="Coins Left"
+            className="h-full w-full object-cover object-right opacity-20"
+          />
+        </div>
+        
+        {/* Right Coin Image with Parallax - Moves up as user scrolls down */}
+        <div 
+          className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none"
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`,
+            transition: 'transform 0.1s ease-out'
+          }}
+        >
+          <img
+            src="/coins_right.png"
+            alt="Coins Right"
+            className="h-full w-full object-cover object-left opacity-20"
+          />
+        </div>
+
+        <div className="container mx-auto relative z-30">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-[#191970] mb-8 text-center scroll-animate fade-in-up">
               ✅ Why Join?
@@ -325,14 +390,14 @@ const Partners = () => {
               📊 Limited Early Access Program
             </h2>
             <p className="text-lg text-white/90 mb-6 scroll-animate fade-in-up">
-              We're onboarding just <span className="text-[#FFD700] font-bold">100 Titan Partners</span> before public launch.
+              We're onboarding just <span className="text-[#FFD700] font-bold">200 Titan Partners</span> before public launch.
             </p>
             <p className="text-base text-white/80 mb-8 scroll-animate fade-in-up">
               Get in early to claim your community's spot and maximize earnings.
             </p>
 
             <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 mb-6 scroll-animate scale-in">
-              <div className="text-5xl font-bold text-[#FFD700] mb-3">100</div>
+              <div className="text-5xl font-bold text-[#FFD700] mb-3">200</div>
               <div className="text-lg text-white">Total Partner Spots Available</div>
               <div className="text-[#FFD700] font-bold mt-2 text-sm">Limited Time • Exclusive Access</div>
             </div>
