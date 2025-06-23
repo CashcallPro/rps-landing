@@ -39,24 +39,7 @@ function App() {
     const roadmapItems = document.querySelectorAll('.roadmap-item');
     roadmapItems.forEach((item) => observer.observe(item));
 
-    // Parallax effect for coins
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const parallaxElements = document.querySelectorAll('.parallax-coin');
-      
-      parallaxElements.forEach((element) => {
-        const speed = parseFloat(element.getAttribute('data-speed') || '0.5');
-        const yPos = -(scrolled * speed);
-        (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -95,50 +78,6 @@ function App() {
       {/* Early Access Titan Program Section */}
       <section className="relative py-20 px-4 bg-[#191970] overflow-hidden">
         <ParticleEffect density={25} />
-        
-        {/* Parallax Coin Elements */}
-        <div className="parallax-coins-container">
-          {/* Left side coins */}
-          <img 
-            src="/image copy.png" 
-            alt="Coin" 
-            className="parallax-coin coin-large coin-left-1" 
-            data-speed="0.3"
-          />
-          <img 
-            src="/image copy.png" 
-            alt="Coin" 
-            className="parallax-coin coin-medium coin-left-2" 
-            data-speed="0.5"
-          />
-          <img 
-            src="/image copy.png" 
-            alt="Coin" 
-            className="parallax-coin coin-small coin-left-3" 
-            data-speed="0.7"
-          />
-          
-          {/* Right side coins */}
-          <img 
-            src="/image copy.png" 
-            alt="Coin" 
-            className="parallax-coin coin-large coin-right-1" 
-            data-speed="0.4"
-          />
-          <img 
-            src="/image copy.png" 
-            alt="Coin" 
-            className="parallax-coin coin-medium coin-right-2" 
-            data-speed="0.6"
-          />
-          <img 
-            src="/image copy.png" 
-            alt="Coin" 
-            className="parallax-coin coin-small coin-right-3" 
-            data-speed="0.8"
-          />
-        </div>
-
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
