@@ -338,3 +338,200 @@
 .dust-particle:nth-child(18) { --random-x: 50px; --random-y: -90px; animation-delay: 17s; }
 .dust-particle:nth-child(19) { --random-x: -90px; --random-y: 60px; animation-delay: 18s; }
 .dust-particle:nth-child(20) { --random-x: 10px; --random-y: -20px; animation-delay: 19s; }
+
+/* Hexagonal Design Styles */
+.hexagon {
+  width: 160px;
+  height: 138px;
+  position: relative;
+  margin: 20px auto;
+  transform: rotate(30deg);
+  cursor: pointer;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 46px solid;
+  border-bottom-color: inherit;
+}
+
+.hexagon:after {
+  top: 100%;
+  border-top: 46px solid;
+  border-top-color: inherit;
+}
+
+.hexagon-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Large Hexagon for Central Feature */
+.hexagon-large {
+  width: 220px;
+  height: 190px;
+  position: relative;
+  margin: 30px auto;
+  transform: rotate(30deg);
+  cursor: pointer;
+}
+
+.hexagon-large:before,
+.hexagon-large:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 110px solid transparent;
+  border-right: 110px solid transparent;
+}
+
+.hexagon-large:before {
+  bottom: 100%;
+  border-bottom: 63px solid;
+  border-bottom-color: inherit;
+}
+
+.hexagon-large:after {
+  top: 100%;
+  border-top: 63px solid;
+  border-top-color: inherit;
+}
+
+.hexagon-content-large {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  width: 180px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive Hexagon Adjustments */
+@media (max-width: 768px) {
+  .hexagon {
+    width: 140px;
+    height: 121px;
+  }
+  
+  .hexagon:before,
+  .hexagon:after {
+    border-left-width: 70px;
+    border-right-width: 70px;
+  }
+  
+  .hexagon:before {
+    border-bottom-width: 40px;
+  }
+  
+  .hexagon:after {
+    border-top-width: 40px;
+  }
+  
+  .hexagon-content {
+    width: 100px;
+    height: 100px;
+    padding: 12px;
+  }
+  
+  .hexagon-large {
+    width: 180px;
+    height: 156px;
+  }
+  
+  .hexagon-large:before,
+  .hexagon-large:after {
+    border-left-width: 90px;
+    border-right-width: 90px;
+  }
+  
+  .hexagon-large:before {
+    border-bottom-width: 52px;
+  }
+  
+  .hexagon-large:after {
+    border-top-width: 52px;
+  }
+  
+  .hexagon-content-large {
+    width: 140px;
+    height: 140px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hexagon {
+    width: 120px;
+    height: 104px;
+  }
+  
+  .hexagon:before,
+  .hexagon:after {
+    border-left-width: 60px;
+    border-right-width: 60px;
+  }
+  
+  .hexagon:before {
+    border-bottom-width: 35px;
+  }
+  
+  .hexagon:after {
+    border-top-width: 35px;
+  }
+  
+  .hexagon-content {
+    width: 85px;
+    height: 85px;
+    padding: 10px;
+  }
+  
+  .hexagon-large {
+    width: 160px;
+    height: 139px;
+  }
+  
+  .hexagon-large:before,
+  .hexagon-large:after {
+    border-left-width: 80px;
+    border-right-width: 80px;
+  }
+  
+  .hexagon-large:before {
+    border-bottom-width: 46px;
+  }
+  
+  .hexagon-large:after {
+    border-top-width: 46px;
+  }
+  
+  .hexagon-content-large {
+    width: 120px;
+    height: 120px;
+    padding: 12px;
+  }
+}
