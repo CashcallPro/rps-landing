@@ -105,9 +105,28 @@ function App() {
         </div>
       </section>
 
-      {/* OG Titans Partnership Program Section */}
+      {/* OG Titans Partnership Program Section with Coin Images */}
       <section className="relative py-20 px-4 bg-[#191970] overflow-hidden">
         <ParticleEffect density={25} />
+        
+        {/* Left Coin Image */}
+        <div className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 z-0">
+          <img
+            src="/coins-left.png"
+            alt="Coins Left"
+            className="h-full w-full object-cover object-right opacity-30"
+          />
+        </div>
+        
+        {/* Right Coin Image */}
+        <div className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 z-0">
+          <img
+            src="/coins_right.png"
+            alt="Coins Right"
+            className="h-full w-full object-cover object-left opacity-30"
+          />
+        </div>
+        
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">

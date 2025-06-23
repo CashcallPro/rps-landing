@@ -108,8 +108,8 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* How Earnings Work - Two Part Section with Image Title */}
-      <section id="earnings" className="relative py-20 px-4 bg-gradient-to-br from-[#4A148C] via-[#6A1B9A] to-[#7B1FA2] overflow-hidden">
+      {/* How Earnings Work - Two Part Section with Image Title and Custom Background */}
+      <section id="earnings" className="relative py-20 px-4 overflow-hidden" style={{ backgroundColor: 'rgb(76, 26, 138)' }}>
         <ParticleEffect density={30} />
         <div className="container mx-auto relative z-10">
           <div className="max-w-6xl mx-auto">
