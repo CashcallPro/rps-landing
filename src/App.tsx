@@ -264,7 +264,7 @@ RPS Titans reimagines the legendary Rock-Paper-Scissors as a real-time, high-sta
                   <div className="absolute -top-4 left-4 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full font-bold">Q4 2025</div>
                   <h3 className="text-xl font-bold text-white mt-4 mb-4">Titans Genesis</h3>
                   <ul className="text-white/80 space-y-2">
-                    <li>• More Win2Earn Game-Modes</li>
+                    <li>• Daily & Weekly challenges</li>
                     <li>• Clan Wars Begin</li>
                     <li>• Token Launch</li>
                   </ul>
