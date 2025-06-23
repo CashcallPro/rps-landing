@@ -23,8 +23,8 @@ const calculateProgress = () => {
   const currentDate = new Date().getTime();
   const daysSinceStart = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
   
-  // Base progress + random increments over time
-  let progress = 47; // Starting point
+  // Start from 2 partners
+  let progress = 2;
   
   // Add random progress for each day that has passed
   for (let i = 0; i < daysSinceStart; i++) {
@@ -40,7 +40,7 @@ const calculateProgress = () => {
 };
 
 const Partners = () => {
-  const [currentProgress, setCurrentProgress] = useState(47);
+  const [currentProgress, setCurrentProgress] = useState(2);
 
   useEffect(() => {
     // Calculate dynamic progress
