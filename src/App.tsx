@@ -134,18 +134,36 @@ function App() {
       {/* About Section */}
       <section id="about" className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="bg-white/50 p-8 rounded-lg backdrop-blur-sm max-w-3xl mx-auto hover:transform hover:scale-105 transition-all duration-300">
-            <h2 className="text-4xl font-bold text-center text-[#191970] mb-6">About RPS Titans</h2>
-            <p className="text-[#191970]/90 text-lg mb-6">
-              RPS Titans revolutionizes the classic game of Rock Paper Scissors with modern gameplay mechanics,
-              competitive elements, and a vibrant community. Our mission is to create the most engaging and
-              strategic RPS experience ever made.
-            </p>
-            <p className="text-[#191970]/90 text-lg">
-              Whether you're a casual player looking for quick matches or a competitive gamer aiming for the top,
-              RPS Titans offers something for everyone. Join thousands of players worldwide in this exciting new
-              take on a timeless game.
-            </p>
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-center text-[#191970] mb-12">About RPS Titans</h2>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Text Content */}
+              <div className="bg-white/50 p-8 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300">
+                <p className="text-[#191970]/90 text-lg mb-6 leading-relaxed">
+                  RPS Titans revolutionizes the classic game of Rock Paper Scissors with modern gameplay mechanics,
+                  competitive elements, and a vibrant community. Our mission is to create the most engaging and
+                  strategic RPS experience ever made.
+                </p>
+                <p className="text-[#191970]/90 text-lg leading-relaxed">
+                  Whether you're a casual player looking for quick matches or a competitive gamer aiming for the top,
+                  RPS Titans offers something for everyone. Join thousands of players worldwide in this exciting new
+                  take on a timeless game.
+                </p>
+              </div>
+
+              {/* Image */}
+              <div className="flex justify-center">
+                <div className="relative">
+                  <img
+                    src="https://5f0hp6m3t5.ufs.sh/f/ccs3Vomw9oukdDz5sqIJYGL8BJ4oXzm2aMFODc701tAfvlhp"
+                    alt="RPS Titans Game Interface"
+                    className="w-full max-w-md rounded-lg shadow-lg hover:transform hover:scale-105 transition-all duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#191970]/20 to-transparent rounded-lg"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
