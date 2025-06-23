@@ -55,12 +55,16 @@ function App() {
             alt="RPS Titans Logo"
             className="w-64 h-64 mb-8 animate-float"
           />
-          <h1 className="text-5xl font-bold text-[#191970] mb-6 animate-slide-in">
-            Welcome to RPS TITANS
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-[#191970] mb-6 animate-slide-in leading-tight tracking-tight">
+            WELCOME<br />
+            TO RPS TITANS
           </h1>
-          <p className="text-xl text-[#191970]/90 mb-8 max-w-2xl animate-slide-in-delay-1">
-            Experience the ultimate Rock Paper Scissors battle arena where strategy meets excitement.
-            Compete against players worldwide and become a true Titan!
+          <p className="text-2xl md:text-3xl text-[#191970] mb-4 font-bold animate-slide-in-delay-1 italic">
+            RPS Titans is more than a game
+          </p>
+          <p className="text-lg md:text-xl text-[#191970]/90 mb-8 max-w-2xl animate-slide-in-delay-2 leading-relaxed">
+            It's a brand, a movement,<br />
+            and a New Era of Play.
           </p>
           <div className="flex gap-4 animate-slide-in-delay-2">
             <a href="https://t.me/RPS_Titans_bot?game=RPSTitans">
