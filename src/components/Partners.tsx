@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowRight, Users, DollarSign, Zap, Shield, TrendingUp, Bot, Trophy, Target, Calculator, Check } from 'lucide-react';
 import Header from './Header';
 import ParticleEffect from './ParticleEffect';
@@ -17,8 +17,36 @@ const TelegramIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+// Dynamic progress calculation
+const calculateProgress = () => {
+  const startDate = new Date('2025-01-01').getTime();
+  const currentDate = new Date().getTime();
+  const daysSinceStart = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
+  
+  // Base progress + random increments over time
+  let progress = 47; // Starting point
+  
+  // Add random progress for each day that has passed
+  for (let i = 0; i < daysSinceStart; i++) {
+    // Use day as seed for consistent random values
+    const seed = startDate + (i * 24 * 60 * 60 * 1000);
+    const random = Math.sin(seed) * 10000;
+    const dailyIncrease = Math.floor((random - Math.floor(random)) * 3); // 0-2 random increase
+    progress += dailyIncrease;
+  }
+  
+  // Cap at 200
+  return Math.min(progress, 200);
+};
+
 const Partners = () => {
+  const [currentProgress, setCurrentProgress] = useState(47);
+
   useEffect(() => {
+    // Calculate dynamic progress
+    const progress = calculateProgress();
+    setCurrentProgress(progress);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -325,16 +353,16 @@ const Partners = () => {
               📊 Limited Early Access Program
             </h2>
             <p className="text-lg text-white/90 mb-6 scroll-animate fade-in-up">
-              We're onboarding just <span className="text-[#FFD700] font-bold">100 Titan Partners</span> before public launch.
+              We're onboarding just <span className="text-[#FFD700] font-bold">200 Titan Partners</span> before public launch.
             </p>
             <p className="text-base text-white/80 mb-8 scroll-animate fade-in-up">
               Get in early to claim your community's spot and maximize earnings.
             </p>
 
             <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 mb-6 scroll-animate scale-in">
-              <div className="text-5xl font-bold text-[#FFD700] mb-3">100</div>
-              <div className="text-lg text-white">Total Partner Spots Available</div>
-              <div className="text-[#FFD700] font-bold mt-2 text-sm">Limited Time • Exclusive Access</div>
+              <div className="text-5xl font-bold text-[#FFD700] mb-3">{currentProgress}/200</div>
+              <div className="text-lg text-white">Partners Onboarded</div>
+              <div className="text-[#FFD700] font-bold mt-2 text-sm">{200 - currentProgress} spots remaining • Limited Time • Exclusive Access</div>
             </div>
 
             <div className="scroll-animate bounce-in">

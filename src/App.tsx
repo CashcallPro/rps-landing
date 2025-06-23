@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { TowerControl as GameController, Swords, Users, Coins, Check } from 'lucide-react';
 import Header from './components/Header';
 import ParticleEffect from './components/ParticleEffect';
@@ -17,11 +17,37 @@ const TelegramIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+// Dynamic progress calculation
+const calculateProgress = () => {
+  const startDate = new Date('2025-01-01').getTime();
+  const currentDate = new Date().getTime();
+  const daysSinceStart = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
+  
+  // Base progress + random increments over time
+  let progress = 47; // Starting point
+  
+  // Add random progress for each day that has passed
+  for (let i = 0; i < daysSinceStart; i++) {
+    // Use day as seed for consistent random values
+    const seed = startDate + (i * 24 * 60 * 60 * 1000);
+    const random = Math.sin(seed) * 10000;
+    const dailyIncrease = Math.floor((random - Math.floor(random)) * 3); // 0-2 random increase
+    progress += dailyIncrease;
+  }
+  
+  // Cap at 200
+  return Math.min(progress, 200);
+};
+
 function App() {
   const roadmapRef = useRef<HTMLDivElement>(null);
-  const progressPercentage = 47; // This can be made dynamic later
+  const [progressPercentage, setProgressPercentage] = useState(47);
 
   useEffect(() => {
+    // Calculate dynamic progress
+    const currentProgress = calculateProgress();
+    setProgressPercentage(currentProgress);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -88,7 +114,7 @@ function App() {
               Early Access Titan Program
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              We're onboarding 100 Telegram groups in our exclusive pre-launch rev-share phase.
+              We're onboarding 200 Telegram groups in our exclusive pre-launch rev-share phase.
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -110,17 +136,17 @@ function App() {
             <div className="max-w-2xl mx-auto">
               <div className="flex justify-between items-center mb-4">
                 <span className="text-white font-bold text-lg">Groups Onboarded</span>
-                <span className="text-[#FFD700] font-bold text-lg">{progressPercentage}/100</span>
+                <span className="text-[#FFD700] font-bold text-lg">{progressPercentage}/200</span>
               </div>
               <div className="w-full bg-white/20 rounded-full h-8 overflow-hidden progress-bar-container">
                 <div 
                   className="h-full bg-gradient-to-r from-[#FFD700] via-[#FFD700] to-[#FFD700]/80 rounded-full progress-bar-fill relative"
-                  style={{ '--progress-width': `${progressPercentage}%` } as React.CSSProperties}
+                  style={{ '--progress-width': `${(progressPercentage / 200) * 100}%` } as React.CSSProperties}
                 >
                 </div>
               </div>
               <div className="mt-4 text-white/80 text-sm">
-                <span className="text-[#FFD700] font-bold">{100 - progressPercentage} spots remaining</span> • Limited time opportunity
+                <span className="text-[#FFD700] font-bold">{200 - progressPercentage} spots remaining</span> • Limited time opportunity
               </div>
             </div>
 
