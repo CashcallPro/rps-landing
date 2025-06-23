@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, Users, DollarSign, Zap, Shield, TrendingUp, Bot, Trophy, Target, Calculator, Check, Gamepad2, Vault, Award } from 'lucide-react';
+import { ArrowRight, Users, DollarSign, Zap, Shield, TrendingUp, Bot, Trophy, Target, Calculator, Check } from 'lucide-react';
 import Header from './Header';
 import ParticleEffect from './ParticleEffect';
 
@@ -17,37 +17,10 @@ const TelegramIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// Dynamic progress calculation - Updated to show 127/200 (73 empty spots)
-const calculateProgress = () => {
-  const startDate = new Date('2025-01-01').getTime();
-  const currentDate = new Date().getTime();
-  const daysSinceStart = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
-  
-  // Start from 127 partners (73 empty spots)
-  let progress = 127;
-  
-  // Add random progress for each day that has passed
-  for (let i = 0; i < daysSinceStart; i++) {
-    // Use day as seed for consistent random values
-    const seed = startDate + (i * 24 * 60 * 60 * 1000);
-    const random = Math.sin(seed) * 10000;
-    const dailyIncrease = Math.floor((random - Math.floor(random)) * 3); // 0-2 random increase
-    progress += dailyIncrease;
-  }
-  
-  // Cap at 200
-  return Math.min(progress, 200);
-};
-
 const Partners = () => {
-  const [currentProgress, setCurrentProgress] = useState(127);
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    // Calculate dynamic progress
-    const progress = calculateProgress();
-    setCurrentProgress(progress);
-
     // Parallax scroll effect
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -95,8 +68,14 @@ const Partners = () => {
             <p className="text-xl md:text-2xl text-[#FFD700] mb-3 font-bold animate-slide-in-delay-1">
               Earn every time your community plays.
             </p>
-            <p className="text-lg text-white/90 mb-6 animate-slide-in-delay-2">
+            <p className="text-lg text-white/90 mb-4 animate-slide-in-delay-2">
               Host the bot. Earn passive income. It's that simple.
+            </p>
+            <p className="text-lg text-white/90 mb-3 animate-slide-in-delay-2">
+              We're onboarding just <span className="text-[#FFD700] font-bold">200 Titan Partners</span> before public launch.
+            </p>
+            <p className="text-base text-white/80 mb-6 animate-slide-in-delay-2">
+              Get in early to claim your community's spot and maximize earnings.
             </p>
           </div>
         </div>
@@ -114,97 +93,6 @@ const Partners = () => {
                 The <strong>Titan Partner Program</strong> is a revenue-sharing system for <strong>Telegram group and channel admins</strong>.
                 Add the <strong>@RPS_Titans_bot</strong> to your group, and start earning automatically whenever your members play.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* OG Titans Partnership Program Section with Parallax Coin Images */}
-      <section className="relative py-20 px-4 bg-[#191970] overflow-hidden">
-        <ParticleEffect density={25} />
-        
-        {/* Left Coin Image with Parallax - Moves up as user scrolls down */}
-        <div 
-          className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none"
-          style={{
-            transform: `translateY(${scrollY * 0.5}px)`,
-            transition: 'transform 0.1s ease-out'
-          }}
-        >
-          <img
-            src="/coins-left.png"
-            alt="Coins Left"
-            className="h-full w-full object-cover object-right opacity-30"
-          />
-        </div>
-        
-        {/* Right Coin Image with Parallax - Moves up as user scrolls down */}
-        <div 
-          className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none"
-          style={{
-            transform: `translateY(${scrollY * 0.5}px)`,
-            transition: 'transform 0.1s ease-out'
-          }}
-        >
-          <img
-            src="/coins_right.png"
-            alt="Coins Right"
-            className="h-full w-full object-cover object-left opacity-30"
-          />
-        </div>
-        
-        <div className="container mx-auto relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              OG Titans Partnership Program
-            </h2>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              We're onboarding 200 Telegram groups in our exclusive pre-launch rev-share phase.
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
-                <Gamepad2 className="w-8 h-8 text-white mb-3 mx-auto" />
-                <h3 className="text-lg font-bold text-[#FFD700] mb-2">Early access to the game bot</h3>
-              </div>
-              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
-                <Vault className="w-8 h-8 text-white mb-3 mx-auto" />
-                <h3 className="text-lg font-bold text-[#FFD700] mb-2">300 $GRPS tokens in your vault</h3>
-              </div>
-              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
-                <TrendingUp className="w-8 h-8 text-white mb-3 mx-auto" />
-                <h3 className="text-lg font-bold text-[#FFD700] mb-2">Earn revenue from every match played in your group</h3>
-              </div>
-              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
-                <Award className="w-8 h-8 text-white mb-3 mx-auto" />
-                <h3 className="text-lg font-bold text-[#FFD700] mb-2">Permanent 'OG Titan' badge</h3>
-              </div>
-            </div>
-
-            {/* Enhanced Progress Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-white font-bold text-lg">OG Titans Onboarded</span>
-                <span className="text-[#FFD700] font-bold text-lg">{currentProgress}/200</span>
-              </div>
-              <div className="w-full bg-white/20 rounded-full h-8 overflow-hidden progress-bar-container">
-                <div 
-                  className="h-full bg-gradient-to-r from-[#FFD700] via-[#FFD700] to-[#FFD700]/80 rounded-full progress-bar-fill relative"
-                  style={{ '--progress-width': `${(currentProgress / 200) * 100}%` } as React.CSSProperties}
-                >
-                </div>
-              </div>
-              <div className="mt-4 text-white/80 text-sm">
-                <span className="text-[#FFD700] font-bold">{200 - currentProgress} spots remaining</span> • Limited time opportunity
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <a href="/partners">
-                <button className="bg-[#FFD700] text-[#191970] px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#FFD700]/90 hover:scale-105 transition-all shadow-lg">
-                  Join Titans Whitelist
-                </button>
-              </a>
             </div>
           </div>
         </div>
@@ -514,15 +402,15 @@ const Partners = () => {
             </p>
 
             <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 mb-6 scroll-animate scale-in">
-              <div className="text-5xl font-bold text-[#FFD700] mb-3">{currentProgress}/200</div>
-              <div className="text-lg text-white">OG Titans Onboarded</div>
-              <div className="text-[#FFD700] font-bold mt-2 text-sm">{200 - currentProgress} spots remaining • Limited Time • Exclusive Access</div>
+              <div className="text-5xl font-bold text-[#FFD700] mb-3">200</div>
+              <div className="text-lg text-white">Total Partner Spots Available</div>
+              <div className="text-[#FFD700] font-bold mt-2 text-sm">Limited Time • Exclusive Access</div>
             </div>
 
             <div className="scroll-animate bounce-in">
               <a href="https://t.me/RPS_Titans_bot">
                 <button className="bg-[#FFD700] text-[#191970] px-8 py-4 rounded-lg font-bold text-xl hover:bg-[#FFD700]/90 hover:scale-105 transition-all shadow-lg flex items-center gap-3 mx-auto">
-                  Join Titans Whitelist
+                  Become a Titan Partner
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </a>
