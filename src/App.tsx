@@ -132,7 +132,7 @@ function App() {
       </section>
 
       {/* About Section with Background Image */}
-      <section id="about" className="relative py-20 px-4 overflow-hidden">
+      <section id="about" className="relative py-32 px-4 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -160,9 +160,10 @@ function App() {
         </div>
       </section>
 
-      {/* Roadmap Section - Original Vertical Layout */}
-      <section id="roadmap" className="py-20 px-4 bg-[#191970]" ref={roadmapRef}>
-        <div className="container mx-auto">
+      {/* Roadmap Section - Original Vertical Layout with Particles */}
+      <section id="roadmap" className="relative py-32 px-4 bg-[#191970] overflow-hidden" ref={roadmapRef}>
+        <ParticleEffect density={25} />
+        <div className="container mx-auto relative z-10">
           <h2 className="text-4xl font-bold text-center text-white mb-4">Development Roadmap</h2>
           <p className="text-center text-[#FFD700] font-bold mb-16">Our path to RPS greatness</p>
 
@@ -175,9 +176,18 @@ function App() {
                   <div className="absolute -top-4 left-4 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full font-bold">Q2 2025</div>
                   <h3 className="text-xl font-bold text-white mt-4 mb-4">Genesis Titans</h3>
                   <ul className="text-white/80 space-y-2">
-                    <li>✅ Develop Gameplay Mechanics</li>
-                    <li>✅ Develop Telegram Infrastructures</li>
-                    <li>✅ Rev-Share Ecosystem</li>
+                    <li className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-[#FFD700] flex-shrink-0" />
+                      Develop Gameplay Mechanics
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-[#FFD700] flex-shrink-0" />
+                      Develop Telegram Infrastructures
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-[#FFD700] flex-shrink-0" />
+                      Rev-Share Ecosystem
+                    </li>
                   </ul>
                 </div>
               </div>
