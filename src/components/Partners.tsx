@@ -63,7 +63,7 @@ const Partners = () => {
         <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-slide-in">
-              Become a Titan Partner
+              BECOME A TITAN PARTNER
             </h1>
             <p className="text-xl md:text-2xl text-[#FFD700] mb-3 font-bold animate-slide-in-delay-1">
               Earn every time your community plays.
@@ -405,7 +405,8 @@ const Partners = () => {
             <div className="scroll-animate bounce-in">
               <a href="https://t.me/RPS_Titans_bot">
                 <button className="bg-[#FFD700] text-[#191970] px-8 py-4 rounded-lg font-bold text-xl hover:bg-[#FFD700]/90 hover:scale-105 transition-all shadow-lg flex items-center gap-3 mx-auto">
-                  Become a Titan Partner
+                  BECOME
+                  A TITAN PARTNER
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </a>
