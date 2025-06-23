@@ -131,8 +131,8 @@ function App() {
         </div>
       </section>
 
-      {/* About Section with Background Image - Increased Height */}
-      <section id="about" className="relative py-32 px-4 overflow-hidden min-h-[600px] flex items-center">
+      {/* About Section with Background Image */}
+      <section id="about" className="relative py-20 px-4 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -144,148 +144,77 @@ function App() {
         </div>
         
         <div className="container mx-auto relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-5xl font-bold text-[#191970] mb-12">About RPS Titans</h2>
-            <div className="bg-white/80 p-10 rounded-xl backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300 shadow-2xl border border-[#FFD700]/20">
-              <p className="text-[#191970]/90 text-xl mb-8 leading-relaxed">
-                RPS Titans revolutionizes the classic game of Rock Paper Scissors with modern gameplay mechanics,
-                competitive elements, and a vibrant community. Our mission is to create the most engaging and
-                strategic RPS experience ever made.
-              </p>
-              <p className="text-[#191970]/90 text-xl leading-relaxed">
-                Whether you're a casual player looking for quick matches or a competitive gamer aiming for the top,
-                RPS Titans offers something for everyone. Join thousands of players worldwide in this exciting new
-                take on a timeless game.
-              </p>
-            </div>
+          <div className="bg-white/50 p-8 rounded-lg backdrop-blur-sm max-w-3xl mx-auto hover:transform hover:scale-105 transition-all duration-300">
+            <h2 className="text-4xl font-bold text-center text-[#191970] mb-6">About RPS Titans</h2>
+            <p className="text-[#191970]/90 text-lg mb-6">
+              RPS Titans revolutionizes the classic game of Rock Paper Scissors with modern gameplay mechanics,
+              competitive elements, and a vibrant community. Our mission is to create the most engaging and
+              strategic RPS experience ever made.
+            </p>
+            <p className="text-[#191970]/90 text-lg">
+              Whether you're a casual player looking for quick matches or a competitive gamer aiming for the top,
+              RPS Titans offers something for everyone. Join thousands of players worldwide in this exciting new
+              take on a timeless game.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Enhanced Roadmap Section - Increased Height with Alternating Layout */}
-      <section id="roadmap" className="py-32 px-4 bg-[#191970] min-h-[800px] flex flex-col justify-center" ref={roadmapRef}>
+      {/* Roadmap Section - Original Vertical Layout */}
+      <section id="roadmap" className="py-20 px-4 bg-[#191970]" ref={roadmapRef}>
         <div className="container mx-auto">
-          <h2 className="text-5xl font-bold text-center text-white mb-6">Development Roadmap</h2>
-          <p className="text-center text-[#FFD700] font-bold mb-20 text-xl">Our path to RPS greatness</p>
+          <h2 className="text-4xl font-bold text-center text-white mb-4">Development Roadmap</h2>
+          <p className="text-center text-[#FFD700] font-bold mb-16">Our path to RPS greatness</p>
 
-          <div className="max-w-7xl mx-auto">
-            {/* Enhanced Horizontal Timeline with Alternating Layout */}
-            <div className="relative">
-              {/* Main Timeline Line */}
-              <div className="absolute top-1/2 left-0 right-0 h-2 bg-gradient-to-r from-[#FFD700] via-[#FFD700] to-[#FFD700]/80 transform -translate-y-1/2 hidden lg:block rounded-full shadow-lg"></div>
-              
-              {/* Timeline Items - Alternating Above/Below */}
-              <div className="grid lg:grid-cols-4 gap-8 lg:gap-12">
-                {/* Q2 2025 - Above the line */}
-                <div className="roadmap-item relative lg:mb-32">
-                  <div className="bg-gradient-to-br from-white/15 to-white/5 p-8 rounded-xl backdrop-blur-sm border-2 border-[#FFD700] relative shadow-2xl hover:shadow-[#FFD700]/20 hover:scale-105 transition-all duration-300">
-                    {/* Timeline Connector */}
-                    <div className="absolute -bottom-8 left-1/2 w-1 h-8 bg-[#FFD700] transform -translate-x-1/2 hidden lg:block"></div>
-                    <div className="absolute -bottom-12 left-1/2 w-6 h-6 bg-[#FFD700] rounded-full transform -translate-x-1/2 hidden lg:block shadow-lg border-4 border-[#191970]"></div>
-                    
-                    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#FFD700] to-[#FFD700]/80 text-[#191970] px-6 py-2 rounded-full font-bold text-sm whitespace-nowrap shadow-lg">
-                      Q2 2025
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mt-6 mb-6 text-center">Genesis Titans</h3>
-                    <ul className="text-white/90 space-y-3 text-base">
-                      <li className="flex items-center gap-3">
-                        <span className="text-green-400 text-lg">✅</span>
-                        <span>Develop Gameplay Mechanics</span>
-                      </li>
-                      <li className="flex items-center gap-3">
-                        <span className="text-green-400 text-lg">✅</span>
-                        <span>Develop Telegram Infrastructures</span>
-                      </li>
-                      <li className="flex items-center gap-3">
-                        <span className="text-green-400 text-lg">✅</span>
-                        <span>Rev-Share Ecosystem</span>
-                      </li>
-                    </ul>
-                  </div>
+          <div className="relative max-w-2xl mx-auto">
+            <div className="roadmap-line"></div>
+
+            <div className="space-y-24">
+              <div className="roadmap-item relative pl-8 md:pl-0 md:ml-[calc(50%+2rem)]">
+                <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border-2 border-[#FFD700] relative">
+                  <div className="absolute -top-4 left-4 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full font-bold">Q2 2025</div>
+                  <h3 className="text-xl font-bold text-white mt-4 mb-4">Genesis Titans</h3>
+                  <ul className="text-white/80 space-y-2">
+                    <li>✅ Develop Gameplay Mechanics</li>
+                    <li>✅ Develop Telegram Infrastructures</li>
+                    <li>✅ Rev-Share Ecosystem</li>
+                  </ul>
                 </div>
+              </div>
 
-                {/* Q3 2025 - Below the line */}
-                <div className="roadmap-item relative lg:mt-32">
-                  <div className="bg-gradient-to-br from-white/15 to-white/5 p-8 rounded-xl backdrop-blur-sm border-2 border-[#FFD700] relative shadow-2xl hover:shadow-[#FFD700]/20 hover:scale-105 transition-all duration-300">
-                    {/* Timeline Connector */}
-                    <div className="absolute -top-8 left-1/2 w-1 h-8 bg-[#FFD700] transform -translate-x-1/2 hidden lg:block"></div>
-                    <div className="absolute -top-12 left-1/2 w-6 h-6 bg-[#FFD700] rounded-full transform -translate-x-1/2 hidden lg:block shadow-lg border-4 border-[#191970]"></div>
-                    
-                    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#FFD700] to-[#FFD700]/80 text-[#191970] px-6 py-2 rounded-full font-bold text-sm whitespace-nowrap shadow-lg lg:top-auto lg:-bottom-6">
-                      Q3 2025
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mt-6 mb-6 text-center">Pre-Launch</h3>
-                    <ul className="text-white/90 space-y-3 text-base">
-                      <li className="flex items-center gap-3">
-                        <span className="text-[#FFD700] text-lg">•</span>
-                        <span>OG Titans Whitelisting</span>
-                      </li>
-                      <li className="flex items-center gap-3">
-                        <span className="text-[#FFD700] text-lg">•</span>
-                        <span>Titan Rev-Share</span>
-                      </li>
-                      <li className="flex items-center gap-3">
-                        <span className="text-[#FFD700] text-lg">•</span>
-                        <span>Community Growth</span>
-                      </li>
-                      <li className="flex items-center gap-3">
-                        <span className="text-[#FFD700] text-lg">•</span>
-                        <span>Early access RPS Titans</span>
-                      </li>
-                    </ul>
-                  </div>
+              <div className="roadmap-item relative pr-8 md:pr-0 md:mr-[calc(50%+2rem)]">
+                <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border-2 border-[#FFD700] relative">
+                  <div className="absolute -top-4 left-4 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full font-bold">Q3 2025</div>
+                  <h3 className="text-xl font-bold text-white mt-4 mb-4">Pre-Launch</h3>
+                  <ul className="text-white/80 space-y-2">
+                    <li>• OG Titans Whitelisting</li>
+                    <li>• Titan Rev-Share</li>
+                    <li>• Community Growth</li>
+                    <li>• Early access RPS Titans</li>
+                  </ul>
                 </div>
+              </div>
 
-                {/* Q1 2026 - Above the line */}
-                <div className="roadmap-item relative lg:mb-32">
-                  <div className="bg-gradient-to-br from-white/15 to-white/5 p-8 rounded-xl backdrop-blur-sm border-2 border-[#FFD700] relative shadow-2xl hover:shadow-[#FFD700]/20 hover:scale-105 transition-all duration-300">
-                    {/* Timeline Connector */}
-                    <div className="absolute -bottom-8 left-1/2 w-1 h-8 bg-[#FFD700] transform -translate-x-1/2 hidden lg:block"></div>
-                    <div className="absolute -bottom-12 left-1/2 w-6 h-6 bg-[#FFD700] rounded-full transform -translate-x-1/2 hidden lg:block shadow-lg border-4 border-[#191970]"></div>
-                    
-                    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#FFD700] to-[#FFD700]/80 text-[#191970] px-6 py-2 rounded-full font-bold text-sm whitespace-nowrap shadow-lg">
-                      Q1 2026
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mt-6 mb-6 text-center">Titans Awakens</h3>
-                    <ul className="text-white/90 space-y-3 text-base">
-                      <li className="flex items-center gap-3">
-                        <span className="text-[#FFD700] text-lg">•</span>
-                        <span>More Win2Earn Game-Modes</span>
-                      </li>
-                      <li className="flex items-center gap-3">
-                        <span className="text-[#FFD700] text-lg">•</span>
-                        <span>Clan Wars Begin</span>
-                      </li>
-                      <li className="flex items-center gap-3">
-                        <span className="text-[#FFD700] text-lg">•</span>
-                        <span>$GRPS Token Launch</span>
-                      </li>
-                    </ul>
-                  </div>
+              <div className="roadmap-item relative pl-8 md:pl-0 md:ml-[calc(50%+2rem)]">
+                <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border-2 border-[#FFD700] relative">
+                  <div className="absolute -top-4 left-4 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full font-bold">Q1 2026</div>
+                  <h3 className="text-xl font-bold text-white mt-4 mb-4">Titans Awakens</h3>
+                  <ul className="text-white/80 space-y-2">
+                    <li>• More Win2Earn Game-Modes</li>
+                    <li>• Clan Wars Begin</li>
+                    <li>• $GRPS Token Launch</li>
+                  </ul>
                 </div>
+              </div>
 
-                {/* Q2 2026 - Below the line */}
-                <div className="roadmap-item relative lg:mt-32">
-                  <div className="bg-gradient-to-br from-white/15 to-white/5 p-8 rounded-xl backdrop-blur-sm border-2 border-[#FFD700] relative shadow-2xl hover:shadow-[#FFD700]/20 hover:scale-105 transition-all duration-300">
-                    {/* Timeline Connector */}
-                    <div className="absolute -top-8 left-1/2 w-1 h-8 bg-[#FFD700] transform -translate-x-1/2 hidden lg:block"></div>
-                    <div className="absolute -top-12 left-1/2 w-6 h-6 bg-[#FFD700] rounded-full transform -translate-x-1/2 hidden lg:block shadow-lg border-4 border-[#191970]"></div>
-                    
-                    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#FFD700] to-[#FFD700]/80 text-[#191970] px-6 py-2 rounded-full font-bold text-sm whitespace-nowrap shadow-lg lg:top-auto lg:-bottom-6">
-                      Q2 2026
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mt-6 mb-6 text-center">Alpha Launch</h3>
-                    <ul className="text-white/90 space-y-3 text-base">
-                      <li className="flex items-center gap-3">
-                        <span className="text-[#FFD700] text-lg">•</span>
-                        <span>Tournaments</span>
-                      </li>
-                      <li className="flex items-center gap-3">
-                        <span className="text-[#FFD700] text-lg">•</span>
-                        <span>Staking Unlockables</span>
-                      </li>
-                    </ul>
-                  </div>
+              <div className="roadmap-item relative pr-8 md:pr-0 md:mr-[calc(50%+2rem)]">
+                <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border-2 border-[#FFD700] relative">
+                  <div className="absolute -top-4 left-4 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full font-bold">Q2 2026</div>
+                  <h3 className="text-xl font-bold text-white mt-4 mb-4">Alpha Launch</h3>
+                  <ul className="text-white/80 space-y-2">
+                    <li>• Tournaments</li>
+                    <li>• Staking Unlockables</li>
+                  </ul>
                 </div>
               </div>
             </div>
