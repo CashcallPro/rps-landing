@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, Users, DollarSign, Zap, Shield, TrendingUp, Bot, Trophy, Target, Calculator, Check } from 'lucide-react';
+import { ArrowRight, Users, DollarSign, Zap, Shield, TrendingUp, Bot, Trophy, Target, Calculator, Check, Gamepad2, Vault, Award, RefreshCw } from 'lucide-react';
 import Header from './Header';
 import ParticleEffect from './ParticleEffect';
 
@@ -17,14 +17,14 @@ const TelegramIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// Dynamic progress calculation
+// Dynamic progress calculation - Updated to show 127/200 (73 empty spots)
 const calculateProgress = () => {
   const startDate = new Date('2025-01-01').getTime();
   const currentDate = new Date().getTime();
   const daysSinceStart = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
   
-  // Start from 52 partners
-  let progress = 52;
+  // Start from 127 partners (73 empty spots)
+  let progress = 127;
   
   // Add random progress for each day that has passed
   for (let i = 0; i < daysSinceStart; i++) {
@@ -40,7 +40,7 @@ const calculateProgress = () => {
 };
 
 const Partners = () => {
-  const [currentProgress, setCurrentProgress] = useState(52);
+  const [currentProgress, setCurrentProgress] = useState(127);
 
   useEffect(() => {
     // Calculate dynamic progress

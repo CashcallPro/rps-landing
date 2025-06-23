@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { TowerControl as GameController, Swords, Users, Coins, Check } from 'lucide-react';
+import { TowerControl as GameController, Swords, Users, Coins, Check, Gamepad2, Vault, TrendingUp, Award, RefreshCw } from 'lucide-react';
 import Header from './components/Header';
 import ParticleEffect from './components/ParticleEffect';
 
@@ -17,14 +17,14 @@ const TelegramIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// Dynamic progress calculation
+// Dynamic progress calculation - Updated to show 127/200 (73 empty spots)
 const calculateProgress = () => {
   const startDate = new Date('2025-01-01').getTime();
   const currentDate = new Date().getTime();
   const daysSinceStart = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
   
-  // Start from 52 partners
-  let progress = 52;
+  // Start from 127 partners (73 empty spots)
+  let progress = 127;
   
   // Add random progress for each day that has passed
   for (let i = 0; i < daysSinceStart; i++) {
@@ -41,7 +41,7 @@ const calculateProgress = () => {
 
 function App() {
   const roadmapRef = useRef<HTMLDivElement>(null);
-  const [progressPercentage, setProgressPercentage] = useState(52);
+  const [progressPercentage, setProgressPercentage] = useState(127);
 
   useEffect(() => {
     // Calculate dynamic progress
@@ -105,30 +105,38 @@ function App() {
         </div>
       </section>
 
-      {/* Early Access Titan Program Section */}
+      {/* OG Titans Partnership Program Section */}
       <section className="relative py-20 px-4 bg-[#191970] overflow-hidden">
         <ParticleEffect density={25} />
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Early Access Titan Program
+              OG Titans Partnership Program
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               We're onboarding 200 Telegram groups in our exclusive pre-launch rev-share phase.
             </p>
             
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
-                <Check className="w-8 h-8 text-white mb-3 mx-auto" />
-                <h3 className="text-lg font-bold text-[#FFD700] mb-2">No cost to join</h3>
+                <Gamepad2 className="w-8 h-8 text-white mb-3 mx-auto" />
+                <h3 className="text-lg font-bold text-[#FFD700] mb-2">Early access to the game bot</h3>
               </div>
               <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
-                <Check className="w-8 h-8 text-white mb-3 mx-auto" />
-                <h3 className="text-lg font-bold text-[#FFD700] mb-2">Earn from every game played in your group</h3>
+                <Vault className="w-8 h-8 text-white mb-3 mx-auto" />
+                <h3 className="text-lg font-bold text-[#FFD700] mb-2">300 $GRPS tokens in your vault</h3>
               </div>
               <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
-                <Check className="w-8 h-8 text-white mb-3 mx-auto" />
-                <h3 className="text-lg font-bold text-[#FFD700] mb-2">Be among the first to unlock Titan rewards</h3>
+                <TrendingUp className="w-8 h-8 text-white mb-3 mx-auto" />
+                <h3 className="text-lg font-bold text-[#FFD700] mb-2">Earn revenue from every match played in your group</h3>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300 md:col-span-2 lg:col-span-1">
+                <Award className="w-8 h-8 text-white mb-3 mx-auto" />
+                <h3 className="text-lg font-bold text-[#FFD700] mb-2">Permanent 'OG Titan' badge</h3>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300 md:col-span-2 lg:col-span-2">
+                <RefreshCw className="w-8 h-8 text-white mb-3 mx-auto" />
+                <h3 className="text-lg font-bold text-[#FFD700] mb-2">50% bonus on referrals during launch week</h3>
               </div>
             </div>
 
@@ -153,7 +161,7 @@ function App() {
             <div className="mt-8">
               <a href="/partners">
                 <button className="bg-[#FFD700] text-[#191970] px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#FFD700]/90 hover:scale-105 transition-all shadow-lg">
-                  Join Early Access Program
+                  Join OG Titans Program
                 </button>
               </a>
             </div>
@@ -190,7 +198,7 @@ function App() {
         </div>
       </section>
 
-      {/* Roadmap Section - Original Vertical Layout with Particles */}
+      {/* Roadmap Section - Updated Dates */}
       <section id="roadmap" className="relative py-32 px-4 bg-[#191970] overflow-hidden" ref={roadmapRef}>
         <ParticleEffect density={25} />
         <div className="container mx-auto relative z-10">
@@ -237,7 +245,7 @@ function App() {
 
               <div className="roadmap-item relative pl-8 md:pl-0 md:ml-[calc(50%+2rem)]">
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border-2 border-[#FFD700] relative">
-                  <div className="absolute -top-4 left-4 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full font-bold">Q1 2026</div>
+                  <div className="absolute -top-4 left-4 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full font-bold">Q4 2025</div>
                   <h3 className="text-xl font-bold text-white mt-4 mb-4">Titans Awakens</h3>
                   <ul className="text-white/80 space-y-2">
                     <li>• More Win2Earn Game-Modes</li>
@@ -249,7 +257,7 @@ function App() {
 
               <div className="roadmap-item relative pr-8 md:pr-0 md:mr-[calc(50%+2rem)]">
                 <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border-2 border-[#FFD700] relative">
-                  <div className="absolute -top-4 left-4 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full font-bold">Q2 2026</div>
+                  <div className="absolute -top-4 left-4 bg-[#FFD700] text-[#191970] px-4 py-1 rounded-full font-bold">Q1 2026</div>
                   <h3 className="text-xl font-bold text-white mt-4 mb-4">Alpha Launch</h3>
                   <ul className="text-white/80 space-y-2">
                     <li>• Tournaments</li>
