@@ -260,183 +260,73 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* Enhanced Why Join Section with Creative Hexagonal Design */}
-      <section className="relative py-24 px-4 overflow-hidden bg-gradient-to-br from-[rgb(235,234,231)] via-[rgb(245,244,241)] to-[rgb(235,234,231)]">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-[#FFD700]/10 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#191970]/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-[#FFD700]/5 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }}></div>
-        </div>
-
-        {/* Left and Right Coin Images with Enhanced Parallax */}
+      {/* Why Join with Parallax Coin Images */}
+      <section className="relative py-16 px-4 overflow-hidden">
+        {/* Left Coin Image with Parallax - Moves up as user scrolls down */}
         <div 
           className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none"
           style={{
-            transform: `translateY(${scrollY * 0.3}px) rotate(${scrollY * 0.05}deg)`,
+            transform: `translateY(${scrollY * 0.5}px)`,
             transition: 'transform 0.1s ease-out'
           }}
         >
           <img
             src="/coins-left.png"
             alt="Coins Left"
-            className="h-full w-full object-cover object-right opacity-15"
+            className="h-full w-full object-cover object-right opacity-20"
           />
         </div>
         
+        {/* Right Coin Image with Parallax - Moves up as user scrolls down */}
         <div 
           className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none"
           style={{
-            transform: `translateY(${scrollY * 0.3}px) rotate(${scrollY * -0.05}deg)`,
+            transform: `translateY(${scrollY * 0.5}px)`,
             transition: 'transform 0.1s ease-out'
           }}
         >
           <img
             src="/coins_right.png"
             alt="Coins Right"
-            className="h-full w-full object-cover object-left opacity-15"
+            className="h-full w-full object-cover object-left opacity-20"
           />
         </div>
 
         <div className="container mx-auto relative z-30">
-          <div className="max-w-7xl mx-auto">
-            {/* Section Header */}
-            <div className="text-center mb-16 scroll-animate fade-in-up">
-              <div className="inline-block relative">
-                <h2 className="text-5xl md:text-6xl font-black text-[#191970] mb-4 relative z-10">
-                  WHY JOIN?
-                </h2>
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-[#FFD700] to-[#FFD700]/50 rounded-full"></div>
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-[#191970] mb-8 text-center scroll-animate fade-in-up">
+              ✅ Why Join?
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="bg-white/50 p-4 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300 scroll-animate fade-in-up">
+                <TrendingUp className="w-10 h-10 text-[#FFD700] mb-3" />
+                <h3 className="text-lg font-bold text-[#191970] mb-2">Passive Income</h3>
+                <p className="text-sm text-[#191970]/80">Earn from your existing community without any extra effort</p>
               </div>
-              <p className="text-xl text-[#191970]/80 mt-6 max-w-2xl mx-auto leading-relaxed">
-                Transform your community into a revenue-generating powerhouse
-              </p>
-            </div>
-
-            {/* Hexagonal Grid Layout */}
-            <div className="relative">
-              {/* Central Feature - Larger Hexagon */}
-              <div className="flex justify-center mb-12 scroll-animate scale-in">
-                <div className="relative group">
-                  <div className="hexagon-large bg-gradient-to-br from-[#FFD700] via-[#FFD700]/90 to-[#FFD700]/80 shadow-2xl hover:shadow-[#FFD700]/30 transition-all duration-500 hover:scale-110">
-                    <div className="hexagon-content-large text-center text-[#191970]">
-                      <TrendingUp className="w-16 h-16 mx-auto mb-4" />
-                      <h3 className="text-2xl font-black mb-3">PASSIVE INCOME</h3>
-                      <p className="text-sm font-semibold leading-tight">
-                        Earn from your existing community without any extra effort
-                      </p>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 hexagon-large bg-gradient-to-br from-[#FFD700]/20 to-transparent blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                </div>
+              <div className="bg-white/50 p-4 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300 scroll-animate fade-in-up">
+                <Zap className="w-10 h-10 text-[#FFD700] mb-3" />
+                <h3 className="text-lg font-bold text-[#191970] mb-2">Fully Automated</h3>
+                <p className="text-sm text-[#191970]/80">No need to manage anything - set it and forget it</p>
               </div>
-
-              {/* Surrounding Features - Smaller Hexagons */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
-                {/* Row 1 */}
-                <div className="flex justify-center scroll-animate fade-in-up" style={{ animationDelay: '0.1s' }}>
-                  <div className="relative group">
-                    <div className="hexagon bg-gradient-to-br from-white/80 via-white/70 to-white/60 backdrop-blur-sm border-2 border-[#191970]/20 shadow-xl hover:shadow-2xl hover:border-[#FFD700]/50 transition-all duration-500 hover:scale-105">
-                      <div className="hexagon-content text-center">
-                        <Zap className="w-10 h-10 text-[#FFD700] mx-auto mb-3" />
-                        <h3 className="text-lg font-bold text-[#191970] mb-2">FULLY AUTOMATED</h3>
-                        <p className="text-sm text-[#191970]/80 leading-tight">
-                          Set it and forget it - no management needed
-                        </p>
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 hexagon bg-[#FFD700]/10 blur-lg group-hover:blur-xl transition-all duration-500"></div>
-                  </div>
-                </div>
-
-                <div className="flex justify-center scroll-animate fade-in-up" style={{ animationDelay: '0.2s' }}>
-                  <div className="relative group">
-                    <div className="hexagon bg-gradient-to-br from-white/80 via-white/70 to-white/60 backdrop-blur-sm border-2 border-[#191970]/20 shadow-xl hover:shadow-2xl hover:border-[#FFD700]/50 transition-all duration-500 hover:scale-105">
-                      <div className="hexagon-content text-center">
-                        <Shield className="w-10 h-10 text-[#FFD700] mx-auto mb-3" />
-                        <h3 className="text-lg font-bold text-[#191970] mb-2">TRANSPARENT</h3>
-                        <p className="text-sm text-[#191970]/80 leading-tight">
-                          Clear reward system you can trust
-                        </p>
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 hexagon bg-[#FFD700]/10 blur-lg group-hover:blur-xl transition-all duration-500"></div>
-                  </div>
-                </div>
-
-                <div className="flex justify-center scroll-animate fade-in-up" style={{ animationDelay: '0.3s' }}>
-                  <div className="relative group">
-                    <div className="hexagon bg-gradient-to-br from-white/80 via-white/70 to-white/60 backdrop-blur-sm border-2 border-[#191970]/20 shadow-xl hover:shadow-2xl hover:border-[#FFD700]/50 transition-all duration-500 hover:scale-105">
-                      <div className="hexagon-content text-center">
-                        <Bot className="w-10 h-10 text-[#FFD700] mx-auto mb-3" />
-                        <h3 className="text-lg font-bold text-[#191970] mb-2">TELEGRAM NATIVE</h3>
-                        <p className="text-sm text-[#191970]/80 leading-tight">
-                          Built 100% for Telegram & TON blockchain
-                        </p>
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 hexagon bg-[#FFD700]/10 blur-lg group-hover:blur-xl transition-all duration-500"></div>
-                  </div>
-                </div>
-
-                {/* Row 2 */}
-                <div className="flex justify-center scroll-animate fade-in-up" style={{ animationDelay: '0.4s' }}>
-                  <div className="relative group">
-                    <div className="hexagon bg-gradient-to-br from-white/80 via-white/70 to-white/60 backdrop-blur-sm border-2 border-[#191970]/20 shadow-xl hover:shadow-2xl hover:border-[#FFD700]/50 transition-all duration-500 hover:scale-105">
-                      <div className="hexagon-content text-center">
-                        <Users className="w-10 h-10 text-[#FFD700] mx-auto mb-3" />
-                        <h3 className="text-lg font-bold text-[#191970] mb-2">COMMUNITY FOCUSED</h3>
-                        <p className="text-sm text-[#191970]/80 leading-tight">
-                          Enhance engagement while earning
-                        </p>
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 hexagon bg-[#FFD700]/10 blur-lg group-hover:blur-xl transition-all duration-500"></div>
-                  </div>
-                </div>
-
-                <div className="flex justify-center scroll-animate fade-in-up" style={{ animationDelay: '0.5s' }}>
-                  <div className="relative group">
-                    <div className="hexagon bg-gradient-to-br from-white/80 via-white/70 to-white/60 backdrop-blur-sm border-2 border-[#191970]/20 shadow-xl hover:shadow-2xl hover:border-[#FFD700]/50 transition-all duration-500 hover:scale-105">
-                      <div className="hexagon-content text-center">
-                        <DollarSign className="w-10 h-10 text-[#FFD700] mx-auto mb-3" />
-                        <h3 className="text-lg font-bold text-[#191970] mb-2">INVITE ONCE</h3>
-                        <p className="text-sm text-[#191970]/80 leading-tight">
-                          One-time setup for continuous income
-                        </p>
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 hexagon bg-[#FFD700]/10 blur-lg group-hover:blur-xl transition-all duration-500"></div>
-                  </div>
-                </div>
-
-                <div className="flex justify-center scroll-animate fade-in-up" style={{ animationDelay: '0.6s' }}>
-                  <div className="relative group">
-                    <div className="hexagon bg-gradient-to-br from-[#191970]/90 via-[#191970]/80 to-[#191970]/70 shadow-2xl hover:shadow-[#191970]/30 transition-all duration-500 hover:scale-105">
-                      <div className="hexagon-content text-center text-white">
-                        <Trophy className="w-10 h-10 text-[#FFD700] mx-auto mb-3" />
-                        <h3 className="text-lg font-bold mb-2">EARLY ACCESS</h3>
-                        <p className="text-sm text-white/90 leading-tight">
-                          Limited spots for maximum rewards
-                        </p>
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 hexagon bg-[#191970]/20 blur-lg group-hover:blur-xl transition-all duration-500"></div>
-                  </div>
-                </div>
+              <div className="bg-white/50 p-4 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300 scroll-animate fade-in-up">
+                <Shield className="w-10 h-10 text-[#FFD700] mb-3" />
+                <h3 className="text-lg font-bold text-[#191970] mb-2">Transparent System</h3>
+                <p className="text-sm text-[#191970]/80">Clear and transparent reward system you can trust</p>
               </div>
-            </div>
-
-            {/* Call to Action */}
-            <div className="text-center mt-16 scroll-animate bounce-in">
-              <div className="inline-block p-8 bg-gradient-to-br from-[#FFD700]/20 via-[#FFD700]/10 to-transparent rounded-3xl border-2 border-[#FFD700]/30 backdrop-blur-sm">
-                <p className="text-2xl font-bold text-[#191970] mb-4">
-                  Ready to turn your community into a revenue stream?
-                </p>
-                <div className="w-16 h-1 bg-[#FFD700] mx-auto rounded-full mb-6"></div>
-                <p className="text-[#191970]/80 mb-6">
-                  Join the exclusive Titan Partner Program today
-                </p>
+              <div className="bg-white/50 p-4 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300 scroll-animate fade-in-up">
+                <Bot className="w-10 h-10 text-[#FFD700] mb-3" />
+                <h3 className="text-lg font-bold text-[#191970] mb-2">Built for Telegram</h3>
+                <p className="text-sm text-[#191970]/80">Game built 100% for Telegram and TON blockchain</p>
+              </div>
+              <div className="bg-white/50 p-4 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300 scroll-animate fade-in-up">
+                <Users className="w-10 h-10 text-[#FFD700] mb-3" />
+                <h3 className="text-lg font-bold text-[#191970] mb-2">Community Focused</h3>
+                <p className="text-sm text-[#191970]/80">Enhance your community engagement while earning</p>
+              </div>
+              <div className="bg-white/50 p-4 rounded-lg backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300 scroll-animate fade-in-up">
+                <DollarSign className="w-10 h-10 text-[#FFD700] mb-3" />
+                <h3 className="text-lg font-bold text-[#191970] mb-2">Invite Once, Earn Forever</h3>
+                <p className="text-sm text-[#191970]/80">One-time setup for continuous passive income</p>
               </div>
             </div>
           </div>
