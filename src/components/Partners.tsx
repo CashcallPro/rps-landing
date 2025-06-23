@@ -108,14 +108,19 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* How Earnings Work - Two Part Section */}
+      {/* How Earnings Work - Two Part Section with Image Title */}
       <section id="earnings" className="relative py-20 px-4 bg-gradient-to-br from-[#4A148C] via-[#6A1B9A] to-[#7B1FA2] overflow-hidden">
         <ParticleEffect density={30} />
         <div className="container mx-auto relative z-10">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-white mb-8 text-center scroll-animate fade-in-up">
-              💸 How Earnings Work
-            </h2>
+            {/* Image Title */}
+            <div className="text-center mb-8 scroll-animate fade-in-up">
+              <img
+                src="/image copy.png"
+                alt="How Earnings Work"
+                className="mx-auto max-w-md w-full h-auto"
+              />
+            </div>
             <p className="text-xl text-white/90 mb-12 text-center scroll-animate fade-in-up leading-relaxed">
               Every match in RPS Titans generates rewards — not just for players, but also for you.
             </p>
