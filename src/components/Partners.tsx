@@ -334,46 +334,46 @@ const Partners = () => {
       </section>
 
       {/* How to Get Started */}
-      <section id="how-it-works" className="py-16 px-4 bg-[#191970]/5">
+      <section id="how-it-works" className="py-16 px-4" style={{ backgroundColor: 'rgb(25, 25, 108)' }}>
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-[#191970] mb-8 text-center scroll-animate fade-in-up">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center scroll-animate fade-in-up">
               ⚙️ How to Get Started
             </h2>
             <div className="space-y-4">
-              <div className="flex items-start gap-3 p-4 bg-white/50 rounded-lg backdrop-blur-sm scroll-animate slide-in-left">
+              <div className="flex items-start gap-3 p-4 bg-white/10 rounded-lg backdrop-blur-sm scroll-animate slide-in-left">
                 <div className="bg-[#FFD700] text-[#191970] w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm">1</div>
                 <div>
-                  <h3 className="font-bold text-base text-[#191970] mb-1">Add the bot</h3>
-                  <p className="text-sm text-[#191970]/80">Add <a href="https://t.me/RPS_Titans_bot" className="text-[#FFD700] hover:underline font-semibold">@RPS_Titans_bot</a> to your group</p>
+                  <h3 className="font-bold text-base text-white mb-1">Add the bot</h3>
+                  <p className="text-sm text-white/80">Add <a href="https://t.me/RPS_Titans_bot" className="text-[#FFD700] hover:underline font-semibold">@RPS_Titans_bot</a> to your group</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 p-4 bg-white/50 rounded-lg backdrop-blur-sm scroll-animate slide-in-left">
+              <div className="flex items-start gap-3 p-4 bg-white/10 rounded-lg backdrop-blur-sm scroll-animate slide-in-left">
                 <div className="bg-[#FFD700] text-[#191970] w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm">2</div>
                 <div>
-                  <h3 className="font-bold text-base text-[#191970] mb-1">Set permissions</h3>
-                  <p className="text-sm text-[#191970]/80">Make sure the bot has the correct permissions to function</p>
+                  <h3 className="font-bold text-base text-white mb-1">Set permissions</h3>
+                  <p className="text-sm text-white/80">Make sure the bot has the correct permissions to function</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 p-4 bg-white/50 rounded-lg backdrop-blur-sm scroll-animate slide-in-left">
+              <div className="flex items-start gap-3 p-4 bg-white/10 rounded-lg backdrop-blur-sm scroll-animate slide-in-left">
                 <div className="bg-[#FFD700] text-[#191970] w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm">3</div>
                 <div>
-                  <h3 className="font-bold text-base text-[#191970] mb-1">Send us your handle</h3>
-                  <p className="text-sm text-[#191970]/80">Send us your group's @handle for verification</p>
+                  <h3 className="font-bold text-base text-white mb-1">Send us your handle</h3>
+                  <p className="text-sm text-white/80">Send us your group's @handle for verification</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 p-4 bg-white/50 rounded-lg backdrop-blur-sm scroll-animate slide-in-left">
+              <div className="flex items-start gap-3 p-4 bg-white/10 rounded-lg backdrop-blur-sm scroll-animate slide-in-left">
                 <div className="bg-[#FFD700] text-[#191970] w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm">4</div>
                 <div>
-                  <h3 className="font-bold text-base text-[#191970] mb-1">Activation</h3>
-                  <p className="text-sm text-[#191970]/80">We'll activate your rev-share and you're ready to earn</p>
+                  <h3 className="font-bold text-base text-white mb-1">Activation</h3>
+                  <p className="text-sm text-white/80">We'll activate your rev-share and you're ready to earn</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 p-4 bg-white/50 rounded-lg backdrop-blur-sm scroll-animate slide-in-left">
+              <div className="flex items-start gap-3 p-4 bg-white/10 rounded-lg backdrop-blur-sm scroll-animate slide-in-left">
                 <div className="bg-[#FFD700] text-[#191970] w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm">5</div>
                 <div>
-                  <h3 className="font-bold text-base text-[#191970] mb-1">Track earnings</h3>
-                  <p className="text-sm text-[#191970]/80">Track your earnings from our dashboard (coming soon)</p>
+                  <h3 className="font-bold text-base text-white mb-1">Track earnings</h3>
+                  <p className="text-sm text-white/80">Track your earnings from our dashboard (coming soon)</p>
                 </div>
               </div>
             </div>
@@ -382,25 +382,18 @@ const Partners = () => {
       </section>
 
       {/* Limited Early Access */}
-      <section className="relative py-16 px-4 bg-[#191970] overflow-hidden">
-        <ParticleEffect density={20} />
+      <section className="relative py-16 px-4 overflow-hidden" style={{ backgroundColor: 'rgb(235, 234, 231)' }}>
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4 scroll-animate fade-in-up">
+            <h2 className="text-3xl font-bold text-[#191970] mb-4 scroll-animate fade-in-up">
               📊 Limited Early Access Program
             </h2>
-            <p className="text-lg text-white/90 mb-6 scroll-animate fade-in-up">
+            <p className="text-lg text-[#191970]/90 mb-6 scroll-animate fade-in-up">
               We're onboarding just <span className="text-[#FFD700] font-bold">200 Titan Partners</span> before public launch.
             </p>
-            <p className="text-base text-white/80 mb-8 scroll-animate fade-in-up">
+            <p className="text-base text-[#191970]/80 mb-8 scroll-animate fade-in-up">
               Get in early to claim your community's spot and maximize earnings.
             </p>
-
-            <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 mb-6 scroll-animate scale-in">
-              <div className="text-5xl font-bold text-[#FFD700] mb-3">200</div>
-              <div className="text-lg text-white">Total Partner Spots Available</div>
-              <div className="text-[#FFD700] font-bold mt-2 text-sm">Limited Time • Exclusive Access</div>
-            </div>
 
             <div className="scroll-animate bounce-in">
               <a href="https://t.me/RPS_Titans_bot">
