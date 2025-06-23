@@ -41,11 +41,19 @@ const calculateProgress = () => {
 
 const Partners = () => {
   const [currentProgress, setCurrentProgress] = useState(127);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     // Calculate dynamic progress
     const progress = calculateProgress();
     setCurrentProgress(progress);
+
+    // Parallax scroll effect
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -65,7 +73,10 @@ const Partners = () => {
     const animatedElements = document.querySelectorAll('.scroll-animate');
     animatedElements.forEach((element) => observer.observe(element));
 
-    return () => observer.disconnect();
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   return (
@@ -108,9 +119,25 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* How Earnings Work - Two Part Section with Image Title and Updated Background */}
+      {/* How Earnings Work - Two Part Section with Image Title, Updated Background, and Parallax Image */}
       <section id="earnings" className="relative py-20 px-4 overflow-hidden" style={{ backgroundColor: 'rgb(25, 25, 108)' }}>
         <ParticleEffect density={30} />
+        
+        {/* Parallax Image positioned absolutely on the right */}
+        <div 
+          className="absolute right-0 top-0 w-64 md:w-80 lg:w-96 h-full z-10 pointer-events-none"
+          style={{
+            transform: `translateY(${scrollY * -0.5}px)`,
+            transition: 'transform 0.1s ease-out'
+          }}
+        >
+          <img
+            src="/image copy copy.png"
+            alt="Parallax Coins"
+            className="w-full h-auto object-contain opacity-30"
+          />
+        </div>
+
         <div className="container mx-auto relative z-10">
           <div className="max-w-6xl mx-auto">
             {/* Image Title */}
