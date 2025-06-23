@@ -119,6 +119,97 @@ const Partners = () => {
         </div>
       </section>
 
+      {/* OG Titans Partnership Program Section with Parallax Coin Images */}
+      <section className="relative py-20 px-4 bg-[#191970] overflow-hidden">
+        <ParticleEffect density={25} />
+        
+        {/* Left Coin Image with Parallax - Moves up as user scrolls down */}
+        <div 
+          className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none"
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`,
+            transition: 'transform 0.1s ease-out'
+          }}
+        >
+          <img
+            src="/coins-left.png"
+            alt="Coins Left"
+            className="h-full w-full object-cover object-right opacity-30"
+          />
+        </div>
+        
+        {/* Right Coin Image with Parallax - Moves up as user scrolls down */}
+        <div 
+          className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none"
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`,
+            transition: 'transform 0.1s ease-out'
+          }}
+        >
+          <img
+            src="/coins_right.png"
+            alt="Coins Right"
+            className="h-full w-full object-cover object-left opacity-30"
+          />
+        </div>
+        
+        <div className="container mx-auto relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              OG Titans Partnership Program
+            </h2>
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              We're onboarding 200 Telegram groups in our exclusive pre-launch rev-share phase.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
+                <Gamepad2 className="w-8 h-8 text-white mb-3 mx-auto" />
+                <h3 className="text-lg font-bold text-[#FFD700] mb-2">Early access to the game bot</h3>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
+                <Vault className="w-8 h-8 text-white mb-3 mx-auto" />
+                <h3 className="text-lg font-bold text-[#FFD700] mb-2">300 $GRPS tokens in your vault</h3>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
+                <TrendingUp className="w-8 h-8 text-white mb-3 mx-auto" />
+                <h3 className="text-lg font-bold text-[#FFD700] mb-2">Earn revenue from every match played in your group</h3>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-[#FFD700]/30 hover:border-[#FFD700] transition-all duration-300">
+                <Award className="w-8 h-8 text-white mb-3 mx-auto" />
+                <h3 className="text-lg font-bold text-[#FFD700] mb-2">Permanent 'OG Titan' badge</h3>
+              </div>
+            </div>
+
+            {/* Enhanced Progress Bar */}
+            <div className="max-w-2xl mx-auto">
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-white font-bold text-lg">OG Titans Onboarded</span>
+                <span className="text-[#FFD700] font-bold text-lg">{currentProgress}/200</span>
+              </div>
+              <div className="w-full bg-white/20 rounded-full h-8 overflow-hidden progress-bar-container">
+                <div 
+                  className="h-full bg-gradient-to-r from-[#FFD700] via-[#FFD700] to-[#FFD700]/80 rounded-full progress-bar-fill relative"
+                  style={{ '--progress-width': `${(currentProgress / 200) * 100}%` } as React.CSSProperties}
+                >
+                </div>
+              </div>
+              <div className="mt-4 text-white/80 text-sm">
+                <span className="text-[#FFD700] font-bold">{200 - currentProgress} spots remaining</span> • Limited time opportunity
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <a href="/partners">
+                <button className="bg-[#FFD700] text-[#191970] px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#FFD700]/90 hover:scale-105 transition-all shadow-lg">
+                  Join Titans Whitelist
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How Earnings Work - Two Part Section with Image Title, Updated Background, and Parallax Image */}
       <section id="earnings" className="relative py-20 px-4 overflow-hidden" style={{ backgroundColor: 'rgb(25, 25, 108)' }}>
         <ParticleEffect density={30} />
@@ -286,10 +377,16 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* Why Join with Coin Images */}
+      {/* Why Join with Parallax Coin Images */}
       <section className="relative py-16 px-4 overflow-hidden">
-        {/* Left Coin Image */}
-        <div className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none">
+        {/* Left Coin Image with Parallax - Moves up as user scrolls down */}
+        <div 
+          className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none"
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`,
+            transition: 'transform 0.1s ease-out'
+          }}
+        >
           <img
             src="/coins-left.png"
             alt="Coins Left"
@@ -297,8 +394,14 @@ const Partners = () => {
           />
         </div>
         
-        {/* Right Coin Image */}
-        <div className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none">
+        {/* Right Coin Image with Parallax - Moves up as user scrolls down */}
+        <div 
+          className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none"
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`,
+            transition: 'transform 0.1s ease-out'
+          }}
+        >
           <img
             src="/coins_right.png"
             alt="Coins Right"
