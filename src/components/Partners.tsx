@@ -108,8 +108,8 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* How Earnings Work - Two Part Section with Image Title and Custom Background */}
-      <section id="earnings" className="relative py-20 px-4 overflow-hidden" style={{ backgroundColor: 'rgb(76, 26, 138)' }}>
+      {/* How Earnings Work - Two Part Section with Image Title and Updated Background */}
+      <section id="earnings" className="relative py-20 px-4 overflow-hidden" style={{ backgroundColor: 'rgb(25, 25, 108)' }}>
         <ParticleEffect density={30} />
         <div className="container mx-auto relative z-10">
           <div className="max-w-6xl mx-auto">
@@ -259,9 +259,27 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* Why Join */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
+      {/* Why Join with Coin Images */}
+      <section className="relative py-16 px-4 overflow-hidden">
+        {/* Left Coin Image */}
+        <div className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none">
+          <img
+            src="/coins-left.png"
+            alt="Coins Left"
+            className="h-full w-full object-cover object-right opacity-20"
+          />
+        </div>
+        
+        {/* Right Coin Image */}
+        <div className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none">
+          <img
+            src="/coins_right.png"
+            alt="Coins Right"
+            className="h-full w-full object-cover object-left opacity-20"
+          />
+        </div>
+
+        <div className="container mx-auto relative z-30">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-[#191970] mb-8 text-center scroll-animate fade-in-up">
               ✅ Why Join?

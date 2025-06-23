@@ -109,8 +109,8 @@ function App() {
       <section className="relative py-20 px-4 bg-[#191970] overflow-hidden">
         <ParticleEffect density={25} />
         
-        {/* Left Coin Image */}
-        <div className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 z-0">
+        {/* Left Coin Image - Brought to top layer */}
+        <div className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none">
           <img
             src="/coins-left.png"
             alt="Coins Left"
@@ -118,8 +118,8 @@ function App() {
           />
         </div>
         
-        {/* Right Coin Image */}
-        <div className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 z-0">
+        {/* Right Coin Image - Brought to top layer */}
+        <div className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 z-20 pointer-events-none">
           <img
             src="/coins_right.png"
             alt="Coins Right"
