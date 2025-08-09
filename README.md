@@ -17,5 +17,5 @@ Command to run
 
 > pm2 start yarn --name "rps-landing" -- start
 
-> pm2 delete rps
+> pm2 delete rps-landing
 
